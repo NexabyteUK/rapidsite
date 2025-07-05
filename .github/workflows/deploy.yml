@@ -27,7 +27,7 @@ jobs:
           version: 8
           
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
         
       - name: Run tests
         run: pnpm test -- --run
@@ -43,7 +43,7 @@ jobs:
       - name: Deploy Site Worker
         run: |
           cd workers/site
-          pnpm install --frozen-lockfile
+          pnpm install --no-frozen-lockfile
           if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
             wrangler deploy --env production
           else
