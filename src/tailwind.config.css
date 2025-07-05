@@ -1,0 +1,24 @@
+@import "tailwindcss/theme" layer(theme);
+@import "./index.css" layer(base);
+
+@theme {
+  /* Colors */
+  --color-brand-background: #EBEDF3;
+  --color-brand-foreground: #2C2A4E;
+  --color-brand-navy: #2C2A4E;
+  --color-brand-accent-1: #D74653;
+  --color-brand-accent-2: #9E3D51;
+  --color-brand-accent-3: #653350;
+
+  /* Fonts */
+  --font-family-heading: Roboto, Arial, sans-serif;
+  --font-family-body: "Roboto Condensed", Roboto, Helvetica, sans-serif;
+  
+  /* Widths */
+  --width-container: 80rem;
+  
+  /* Spacing */
+  --spacing-desktop: 6rem;
+  --spacing-tablet: 4rem;
+  --spacing-mobile: 3rem;
+}

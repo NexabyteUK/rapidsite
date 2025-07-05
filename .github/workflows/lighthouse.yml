@@ -1,0 +1,81 @@
+name: Lighthouse CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          urls: |
+            http://localhost:4173/
+            http://localhost:4173/pricing
+            http://localhost:4173/contact
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 3
+          configPath: ./.lighthouserc.js
+          
+      - name: Format Lighthouse results
+        id: lighthouse-format
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const results = ${{ steps.lighthouse.outputs.manifest }};
+            const scores = results[0].summary;
+            
+            const formatScore = (score) => {
+              const percentage = Math.round(score * 100);
+              if (percentage >= 90) return `🟢 ${percentage}`;
+              if (percentage >= 50) return `🟡 ${percentage}`;
+              return `🔴 ${percentage}`;
+            };
+            
+            const comment = `
+            ## Lighthouse Results
+            
+            | Metric | Score |
+            |--------|-------|
+            | Performance | ${formatScore(scores.performance)} |
+            | Accessibility | ${formatScore(scores.accessibility)} |
+            | Best Practices | ${formatScore(scores['best-practices'])} |
+            | SEO | ${formatScore(scores.seo)} |
+            
+            [View full report](${results[0].url})
+            `;
+            
+            return comment;
+            
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: ${{ steps.lighthouse-format.outputs.result }}
+            });

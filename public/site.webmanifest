@@ -1,0 +1,19 @@
+{
+  "name": "RapidSite - Professional Website Builder",
+  "short_name": "RapidSite",
+  "description": "Get your business online with RapidSite. Professional websites from £75/month.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#FF6B35",
+  "background_color": "#FFFFFF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "en-GB"
+}

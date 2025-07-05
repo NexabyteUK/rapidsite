@@ -1,0 +1,34 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EBEDF3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Brand Circle -->
+  <circle cx="150" cy="150" r="60" fill="#D74653"/>
+  
+  <!-- Main Text -->
+  <text x="80" y="300" font-family="Roboto, Arial, sans-serif" font-size="72" font-weight="700" fill="#2C2A4E">RapidSite</text>
+  <text x="80" y="360" font-family="Roboto Condensed, Roboto, sans-serif" font-size="36" font-weight="400" fill="#2C2A4E">Professional Website Builder</text>
+  <text x="80" y="420" font-family="Roboto Condensed, Roboto, sans-serif" font-size="32" font-weight="400" fill="#666666">Launch in 7 days — pay monthly</text>
+  <text x="80" y="480" font-family="Roboto Condensed, Roboto, sans-serif" font-size="28" font-weight="500" fill="#D74653">From £99/month</text>
+  
+  <!-- Accent Line -->
+  <rect x="80" y="500" width="400" height="4" fill="#D74653"/>
+  
+  <!-- Right Side Graphics -->
+  <rect x="700" y="100" width="400" height="300" rx="20" fill="#ffffff" stroke="#D74653" stroke-width="3"/>
+  <rect x="720" y="120" width="360" height="20" rx="10" fill="#EBEDF3"/>
+  <rect x="720" y="160" width="280" height="40" rx="8" fill="#D74653"/>
+  <rect x="720" y="220" width="240" height="20" rx="4" fill="#EBEDF3"/>
+  <rect x="720" y="260" width="320" height="20" rx="4" fill="#EBEDF3"/>
+  <rect x="720" y="300" width="200" height="20" rx="4" fill="#EBEDF3"/>
+  
+  <!-- Bottom branding -->
+  <text x="80" y="580" font-family="Roboto Condensed, Roboto, sans-serif" font-size="24" font-weight="400" fill="#999999">nexabyte.co.uk/rapidsite</text>
+</svg>

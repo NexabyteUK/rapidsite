@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&family=Roboto:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-background: #EBEDF3;
+  --color-brand-foreground: #2C2A4E;
+  --color-brand-navy: #2C2A4E;
+  --color-brand-accent-1: #D74653;
+  --color-brand-accent-2: #9E3D51;
+  --color-brand-accent-3: #653350;
+
+  --font-family-heading: 'Roboto', Arial, sans-serif;
+  --font-family-body: 'Roboto Condensed', 'Roboto', Helvetica, sans-serif;
+  
+  --width-container: 1280px;
+  
+  --spacing-desktop: 96px;
+  --spacing-tablet: 64px;
+  --spacing-mobile: 48px;
+}
+
+body {
+  background-color: var(--color-brand-background);
+  color: var(--color-brand-foreground);
+  font-family: var(--font-family-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+}

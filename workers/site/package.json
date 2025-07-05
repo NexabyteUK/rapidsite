@@ -1,0 +1,21 @@
+{
+  "name": "rapidsite-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for RapidSite static site hosting",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.4.0",
+    "resend": "^4.0.0"
+  }
+}
