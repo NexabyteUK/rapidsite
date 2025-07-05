@@ -7,12 +7,6 @@ bucket = "./dist"
 
 [env.production]
 vars = { ENVIRONMENT = "production" }
-routes = [
-  { pattern = "rapidsite.nexabyte.co.uk", custom_domain = true }
-]
 
 [env.staging]
 vars = { ENVIRONMENT = "staging" }
-routes = [
-  { pattern = "staging-rapidsite.nexabyte.co.uk", custom_domain = true }
-]
