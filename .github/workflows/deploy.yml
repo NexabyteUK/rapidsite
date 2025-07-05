@@ -45,18 +45,21 @@ jobs:
           mkdir -p workers/site/dist
           cp -r dist/* workers/site/dist/
           
-      - name: Deploy Site Worker
+      - name: Install Worker dependencies
         run: |
           cd workers/site
           pnpm install --no-frozen-lockfile
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            wrangler deploy --env production
-          else
-            wrangler deploy --env staging
-          fi
+          
+      - name: Deploy Site Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: 'workers/site'
+          environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+          secrets: |
+            RESEND_API_KEY
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           
       - name: Comment PR
