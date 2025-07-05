@@ -65,7 +65,7 @@ export async function handleContactForm(request: Request, env: ContactEnv): Prom
     // Send email notification
     await resend.emails.send({
       from: 'RapidSite Contact Form <noreply@nexabyte.co.uk>',
-      to: 'sales@nexabyte.co.uk',
+      to: 'info@nexabyte.co.uk',
       subject: `New Contact Form Submission from ${data.name}`,
       html: `
         <h2>New Contact Form Submission</h2>
