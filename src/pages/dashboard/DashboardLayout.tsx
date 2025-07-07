@@ -33,7 +33,7 @@ const DashboardLayout: React.FC = () => {
       href: '/dashboard/website',
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
     },
@@ -93,17 +93,17 @@ const DashboardLayout: React.FC = () => {
       )}>
         <div className="flex flex-col h-full">
           {/* Logo */}
-          <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
-            <Link to="/" className="flex items-center">
+          <div className="flex items-center justify-center h-20 px-6 border-b border-gray-200 relative">
+            <Link to="/" className="flex items-center justify-center">
               <img 
                 src="/rapidsite-logo.png" 
                 alt="RapidSite" 
-                className="h-6 w-auto"
+                className="h-10 w-auto"
               />
             </Link>
             <button
               onClick={() => setSidebarOpen(false)}
-              className="lg:hidden p-1 rounded-md text-gray-400 hover:text-gray-600"
+              className="lg:hidden absolute right-4 p-1 rounded-md text-gray-400 hover:text-gray-600"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -158,29 +158,31 @@ const DashboardLayout: React.FC = () => {
       <div className="lg:pl-64">
         {/* Top bar */}
         <div className="bg-white shadow-sm border-b border-gray-200">
-          <div className="flex items-center justify-between h-16 px-6">
-            <button
-              onClick={() => setSidebarOpen(true)}
-              className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-            
-            <div className="flex items-center space-x-4">
-              <Link
-                to="/"
-                className="text-sm text-gray-600 hover:text-gray-900"
+          <div className="max-w-container mx-auto px-4 md:px-8 lg:px-[72px]">
+            <div className="flex items-center justify-between h-20">
+              <button
+                onClick={() => setSidebarOpen(true)}
+                className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600"
               >
-                ← Back to main site
-              </Link>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              
+              <div className="flex items-center space-x-4">
+                <Link
+                  to="/"
+                  className="text-sm text-gray-600 hover:text-gray-900"
+                >
+                  ← Back to main site
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Page content */}
-        <main className="p-6">
+        <main className="max-w-container mx-auto px-4 md:px-8 lg:px-[72px] py-6">
           <Outlet />
         </main>
       </div>

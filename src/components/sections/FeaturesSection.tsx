@@ -43,8 +43,8 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
       </svg>
     ),
-    title: "People Find You",
-    description: "Built so Google loves it and customers can find you. More visitors means more business."
+    title: "Built to Last",
+    description: "Clean, fast code that loads quickly and works reliably. No cutting corners, just solid websites that do their job."
   },
   {
     icon: (

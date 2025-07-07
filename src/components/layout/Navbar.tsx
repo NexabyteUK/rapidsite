@@ -42,9 +42,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/rapidsite-logo.png" 
+              src={isScrolled ? "/rapidsite-logo-white.png" : "/rapidsite-logo.png"}
               alt="RapidSite" 
-              className="h-8 w-auto"
+              className="h-10 w-auto transition-all duration-300"
             />
           </Link>
 

@@ -33,9 +33,9 @@ const LoginPage: React.FC = () => {
           <div className="text-center mb-8">
             <Link to="/" className="inline-block">
               <img 
-                src="/rapidsite-logo.png" 
+                src="/rapidsite-logo-white.png" 
                 alt="RapidSite" 
-                className="h-12 w-auto mx-auto filter brightness-0 invert"
+                className="h-16 w-auto mx-auto"
               />
             </Link>
             <p className="text-white/80 mt-2">Customer Dashboard</p>

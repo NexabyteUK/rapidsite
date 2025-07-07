@@ -24,9 +24,9 @@ const Footer = () => {
         <div className="mb-12">
           <Link to="/" className="inline-block mb-4">
             <img 
-              src="/rapidsite-logo.png" 
+              src="/rapidsite-logo-white.png" 
               alt="RapidSite" 
-              className="h-8 w-auto filter brightness-0 invert"
+              className="h-10 w-auto"
             />
           </Link>
           <p className="text-gray-300 max-w-md">
