@@ -13,11 +13,21 @@ import DPAPage from './pages/legal/DPAPage'
 import SLAPage from './pages/legal/SLAPage'
 import BuyoutPage from './pages/legal/BuyoutPage'
 
+// Dashboard imports
+import LoginPage from './pages/auth/LoginPage'
+import DashboardLayout from './pages/dashboard/DashboardLayout'
+import OverviewPage from './pages/dashboard/OverviewPage'
+import WebsitePage from './pages/dashboard/WebsitePage'
+import SubscriptionPage from './pages/dashboard/SubscriptionPage'
+import AddOnsPage from './pages/dashboard/AddOnsPage'
+import SupportPage from './pages/dashboard/SupportPage'
+
 function App() {
   return (
     <HelmetProvider>
       <Router>
         <Routes>
+          {/* Main website routes */}
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="pricing" element={<PricingPage />} />
@@ -31,6 +41,18 @@ function App() {
             <Route path="legal/buyout" element={<BuyoutPage />} />
           </Route>
           <Route path="/payment-issue" element={<PaymentIssuePage />} />
+          
+          {/* Authentication routes */}
+          <Route path="/login" element={<LoginPage />} />
+          
+          {/* Dashboard routes */}
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<OverviewPage />} />
+            <Route path="website" element={<WebsitePage />} />
+            <Route path="subscription" element={<SubscriptionPage />} />
+            <Route path="add-ons" element={<AddOnsPage />} />
+            <Route path="support" element={<SupportPage />} />
+          </Route>
         </Routes>
       </Router>
     </HelmetProvider>
