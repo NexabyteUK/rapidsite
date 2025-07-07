@@ -41,12 +41,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className={cn(
-              "text-2xl font-heading font-bold transition-colors",
-              isScrolled ? "text-white" : "text-brand-foreground"
-            )}>
-              RapidSite
-            </span>
+            <img 
+              src="/rapidsite-logo.png" 
+              alt="RapidSite" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

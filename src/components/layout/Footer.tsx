@@ -20,6 +20,20 @@ const Footer = () => {
   return (
     <footer className="bg-brand-navy text-white">
       <div className="max-w-container mx-auto px-4 md:px-8 lg:px-[72px] py-12 md:py-16">
+        {/* Logo and tagline */}
+        <div className="mb-12">
+          <Link to="/" className="inline-block mb-4">
+            <img 
+              src="/rapidsite-logo.png" 
+              alt="RapidSite" 
+              className="h-8 w-auto filter brightness-0 invert"
+            />
+          </Link>
+          <p className="text-gray-300 max-w-md">
+            Your professional website, sorted. No stress, no massive bills.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Links Column */}
           <div>
@@ -44,18 +58,18 @@ const Footer = () => {
             <div className="space-y-2 font-body text-gray-300">
               <p>
                 <a
-                  href="mailto:sales@nexabyte.co.uk"
+                  href="mailto:info@nexabyte.co.uk"
                   className="hover:text-brand-accent-1 transition-colors"
                 >
-                  sales@nexabyte.co.uk
+                  info@nexabyte.co.uk
                 </a>
               </p>
               <p>
                 <a
-                  href="tel:+441234567890"
+                  href="tel:+442079460958"
                   className="hover:text-brand-accent-1 transition-colors"
                 >
-                  +44 (0) 123 456 7890
+                  +44 20 7946 0958
                 </a>
               </p>
               <p>
