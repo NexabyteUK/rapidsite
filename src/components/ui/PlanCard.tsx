@@ -13,14 +13,14 @@ const PlanCard = ({ name, price, term, features, isPopular = false }: PlanCardPr
   return (
     <div
       className={cn(
-        "bg-white rounded-2xl p-8 transition-all duration-300",
+        "bg-white rounded-2xl transition-all duration-300 relative flex flex-col h-full",
         isPopular
-          ? "shadow-xl scale-105 border-2 border-brand-accent-1"
-          : "shadow-lg hover:shadow-xl"
+          ? "shadow-xl scale-105 border-2 border-brand-accent-1 pt-12 px-8 pb-8"
+          : "shadow-lg hover:shadow-xl p-8"
       )}
     >
       {isPopular && (
-        <div className="bg-brand-accent-1 text-white text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-accent-1 text-white text-sm font-bold px-4 py-1 rounded-full z-10">
           MOST POPULAR
         </div>
       )}
@@ -42,7 +42,7 @@ const PlanCard = ({ name, price, term, features, isPopular = false }: PlanCardPr
         <p>{term} minimum term</p>
       </div>
       
-      <ul className="space-y-3 mb-8">
+      <ul className="space-y-3 flex-grow mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
             <svg
@@ -66,7 +66,7 @@ const PlanCard = ({ name, price, term, features, isPopular = false }: PlanCardPr
       <Link
         to="/contact"
         className={cn(
-          "block w-full text-center py-3 px-6 rounded-lg font-body font-medium transition-colors",
+          "block w-full text-center py-3 px-6 rounded-lg font-body font-medium transition-colors mt-auto",
           isPopular
             ? "bg-brand-accent-1 hover:bg-brand-accent-2 text-white"
             : "bg-gray-100 hover:bg-gray-200 text-brand-foreground"

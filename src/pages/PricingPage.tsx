@@ -8,12 +8,14 @@ const plans = [
     price: 109,
     term: "12 month",
     features: [
-      "7-day build",
-      "Hosting included",
-      "SSL certificate",
-      "48-hour support response",
-      "Security updates",
-      "Global edge hosting"
+      "Your website built in 7 days",
+      "Works on phone, tablet & computer",
+      "All hosting costs covered",
+      "Secure connection (HTTPS)",
+      "We'll help within 48 hours",
+      "Kept safe and up-to-date",
+      "Fast loading worldwide",
+      "100% done for you - no stress"
     ],
     isPopular: true
   },
@@ -22,12 +24,14 @@ const plans = [
     price: 99,
     term: "18 month",
     features: [
-      "7-day build",
-      "Hosting included",
-      "SSL certificate",
-      "48-hour support response",
-      "Security updates",
-      "Global edge hosting"
+      "Your website built in 7 days",
+      "Works on phone, tablet & computer",
+      "All hosting costs covered", 
+      "Secure connection (HTTPS)",
+      "We'll help within 48 hours",
+      "Kept safe and up-to-date",
+      "Fast loading worldwide",
+      "100% done for you - no stress"
     ]
   }
 ]
@@ -36,24 +40,24 @@ const addOnServices = [
   {
     name: "Change-Pack",
     price: "£49 per 30-minute block",
-    description: "Need content updates, image changes, or layout tweaks? We handle it for you.",
+    description: "Need to update your website? We'll make any changes you need, quickly and professionally.",
     features: [
-      "Content updates",
-      "Image changes", 
-      "Layout modifications",
-      "New page additions",
-      "Any design changes"
+      "Update your content anytime",
+      "Add or change photos", 
+      "Adjust how things look",
+      "Add new pages",
+      "Any tweaks you want"
     ]
   },
   {
     name: "Priority Support", 
     price: "£19/month",
-    description: "Get 24-hour response for urgent issues instead of 48 hours.",
+    description: "Jump the queue when you need help. Get faster responses when something urgent comes up.",
     features: [
-      "24-hour response",
-      "Priority queue",
-      "Direct support line",
-      "Faster issue resolution"
+      "We'll respond within 24 hours",
+      "Your requests go first",
+      "Direct line to our team",
+      "Urgent issues sorted faster"
     ]
   }
 ]
@@ -82,11 +86,13 @@ const PricingPage: React.FC = () => {
       </Section>
 
       <Section background="gray" padding="lg">
-        <Grid cols={{ mobile: 1, tablet: 2, desktop: 3 }} className="mb-16">
+        <div className="max-w-4xl mx-auto">
+          <Grid cols={{ mobile: 1, tablet: 2 }} className="mb-16">
           {plans.map((plan, index) => (
             <PlanCard key={index} {...plan} />
           ))}
         </Grid>
+        </div>
 
         <div className="text-center mb-16">
           <p className="font-body text-gray-600 mb-4">
