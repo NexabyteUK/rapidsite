@@ -33,7 +33,7 @@ const LoginPage: React.FC = () => {
           <div className="text-center mb-8">
             <Link to="/" className="inline-block">
               <img 
-                src="/rapidsite-logo-white.png" 
+                src="/rapidsite-logo.png" 
                 alt="RapidSite" 
                 className="h-16 w-auto mx-auto"
               />

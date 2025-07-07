@@ -24,6 +24,10 @@ const faqItems = [
   {
     question: "How fast do you respond to support requests?",
     answer: "Within 48 hours for all support queries. Need faster response? Our Priority Support add-on gets you replies within 24 hours for £19/month."
+  },
+  {
+    question: "Do I need to have a domain name already?",
+    answer: "Most of our clients already have their domain sorted, but if you don't have one yet, no worries - we're happy to help you get the right one. Just let us know and we'll point you in the right direction."
   }
 ]
 

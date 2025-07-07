@@ -53,7 +53,7 @@ const PricingSection = () => {
           Ready to get started? Contact us to begin your project.
         </p>
         <Button as="link" href="/contact" size="lg">
-          Get Started Today
+          Let's go!
         </Button>
       </div>
     </Section>

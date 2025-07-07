@@ -98,7 +98,7 @@ const PricingPage: React.FC = () => {
 
         <div className="text-center mb-16">
           <p className="font-body text-gray-600 mb-4">
-            Prices exclude VAT. 12-month minimum, then month-to-month.
+            12-month minimum, then month-to-month.
           </p>
           <Button as="link" href="/contact" size="lg">
             Let's Get Started
