@@ -22,7 +22,7 @@ const SLAPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
           <p className="mb-4">
             This Service Level Agreement ("SLA") is entered into between Nexabyte Limited (trading as "RapidSite"), 
-            a company registered in England and Wales (Company No. 12345678), and the customer ("Customer", "you") 
+            a company registered in England and Wales (Company No. 15817114), and the customer ("Customer", "you") 
             who subscribes to our paid services.
           </p>
           <p className="mb-4">
@@ -154,10 +154,9 @@ const SLAPage: React.FC = () => {
             RapidSite provides technical support through the following channels:
           </p>
           <ul className="list-disc pl-6 mb-4">
-            <li>Email support: support@rapidsite.com</li>
+            <li>Email support: info@nexabyte.co.uk</li>
             <li>Live chat (Business hours: 9 AM - 6 PM GMT, Monday-Friday)</li>
             <li>Support ticket system: support.rapidsite.com</li>
-            <li>Phone support (Enterprise customers only)</li>
           </ul>
           
           <h3 className="text-xl font-semibold text-gray-800 mb-3">4.2 Issue Priority Levels</h3>
@@ -395,12 +394,8 @@ const SLAPage: React.FC = () => {
           </p>
           <div className="bg-gray-100 p-4 rounded-lg">
             <p className="mb-2"><strong>Nexabyte Limited (trading as RapidSite)</strong></p>
-            <p className="mb-2">123 Tech Street, London EC2A 1AB, United Kingdom</p>
-            <p className="mb-2"><strong>SLA Claims:</strong> sla@rapidsite.com</p>
-            <p className="mb-2"><strong>Technical Support:</strong> support@rapidsite.com</p>
-            <p className="mb-2"><strong>Support Portal:</strong> support.rapidsite.com</p>
-            <p className="mb-2"><strong>Status Page:</strong> status.rapidsite.com</p>
-            <p><strong>Enterprise Support Hotline:</strong> +44 20 1234 5679</p>
+            <p className="mb-2">Stratford-upon-Avon, United Kingdom</p>
+            <p className="mb-2"><strong>More information:</strong> info@nexabyte.co.uk</p>
           </div>
         </section>
       </LegalPageTemplate>

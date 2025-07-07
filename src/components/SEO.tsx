@@ -66,8 +66,7 @@ const SEO = ({
           "name": "RapidSite by Nexabyte Limited",
           "image": image,
           "url": url,
-          "telephone": "+442079460958",
-          "email": "sales@nexabyte.co.uk",
+          "email": "info@nexabyte.co.uk",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "London",

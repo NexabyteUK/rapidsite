@@ -22,7 +22,7 @@ const TermsPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Agreement to Terms</h2>
           <p className="mb-4">
             These Terms of Service ("Terms") constitute a legally binding agreement between you and Nexabyte Limited 
-            (trading as "RapidSite"), a company registered in England and Wales (Company No. 12345678), having its 
+            (trading as "RapidSite"), a company registered in England and Wales (Company No. 15817114), having its 
             registered office at 123 Tech Street, London, EC2A 1AB, United Kingdom ("Company", "we", "us", or "our").
           </p>
           <p className="mb-4">
@@ -265,10 +265,9 @@ const TermsPage: React.FC = () => {
           </p>
           <div className="bg-gray-100 p-4 rounded-lg">
             <p className="mb-2"><strong>Nexabyte Limited (trading as RapidSite)</strong></p>
-            <p className="mb-2">123 Tech Street, London EC2A 1AB, United Kingdom</p>
-            <p className="mb-2"><strong>Email:</strong> legal@rapidsite.com</p>
-            <p className="mb-2"><strong>Phone:</strong> +44 20 1234 5678</p>
-            <p><strong>Company Registration:</strong> 12345678 (England and Wales)</p>
+            <p className="mb-2">Stratford-upon-Avon, United Kingdom</p>
+            <p className="mb-2"><strong>Email:</strong> info@nexabyte.co.uk</p>
+            <p><strong>Company Registration:</strong> 15817114 (England and Wales)</p>
           </div>
         </section>
       </LegalPageTemplate>

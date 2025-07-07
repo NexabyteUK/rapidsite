@@ -39,7 +39,7 @@ This document is the **single source of truth** for developers and designers bui
 | `/rapidsite` | Home / Landing | Hero, Benefits, Plan Cards, Process, Testimonials, FAQ, Final CTA, Footer |
 | `/rapidsite/pricing` | Detailed plan comparison | Pricing table, FAQ, CTA |
 | `/rapidsite/how-it-works` | 3‑step visual process | Step cards, timeline, video embed |
-| `/rapidsite/contact` | Lead form | Native contact form, phone, address |
+| `/rapidsite/contact` | Lead form | Native contact form, address |
 | `/rapidsite/legal/tos` | Terms of Service | Imported markdown |
 | `/rapidsite/legal/dpa` | Data Processing Addendum | Imported markdown |
 | `/rapidsite/legal/sla` | Support SLA | Table |
@@ -78,7 +78,7 @@ All legal documents will be converted to markdown and statically served on this 
 > * **Launch in 7 days** – no six‑week build marathons.
 > * **Pay monthly, not thousands up front** – from £99.
 > * **Stress‑free hosting & security updates** – we keep your site safe and online while you run the business.
-> * **UK support next business day** – real humans on email and phone.
+> * **UK support next business day** – real humans on email.
 > * **Global edge hosting & SSL included** – your site loads fast everywhere.
 > * **Scale when you’re ready** – bolt‑ons for e‑commerce, SEO, booking forms.
 >

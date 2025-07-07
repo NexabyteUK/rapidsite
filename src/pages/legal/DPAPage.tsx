@@ -22,8 +22,8 @@ const DPAPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction and Scope</h2>
           <p className="mb-4">
             This Data Processing Agreement ("DPA") forms part of the Terms of Service ("Agreement") between 
-            Nexabyte Limited (trading as "RapidSite"), a company registered in England and Wales (Company No. 12345678), 
-            having its registered office at 123 Tech Street, London, EC2A 1AB, United Kingdom ("Processor", "we", "us") 
+            Nexabyte Limited (trading as "RapidSite"), a company registered in England and Wales (Company No. 15817114), 
+            having its registered office at 1 Pettipher Mews, Stratford-upon-Avon, United Kingdom ("Processor", "we", "us") 
             and the customer ("Controller", "you") who uses our website building platform and services.
           </p>
           <p className="mb-4">
@@ -381,11 +381,9 @@ const DPAPage: React.FC = () => {
           </p>
           <div className="bg-gray-100 p-4 rounded-lg">
             <p className="mb-2"><strong>Nexabyte Limited (trading as RapidSite)</strong></p>
-            <p className="mb-2">123 Tech Street, London EC2A 1AB, United Kingdom</p>
-            <p className="mb-2"><strong>General Inquiries:</strong> dpa@rapidsite.com</p>
-            <p className="mb-2"><strong>Data Protection Officer:</strong> dpo@rapidsite.com</p>
-            <p className="mb-2"><strong>Security Team:</strong> security@rapidsite.com</p>
-            <p><strong>ICO Registration Number:</strong> ZA123456</p>
+            <p className="mb-2">1 Pettipher Mews, Stratford-upon-Avon, United Kingdom</p>
+            <p className="mb-2"><strong>All Inquiries, DPO & Security:</strong> info@nexabyte.co.uk</p>
+            <p><strong>ICO Registration Number:</strong> ZB911761</p>
           </div>
         </section>
         

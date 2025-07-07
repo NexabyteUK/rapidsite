@@ -22,7 +22,7 @@ const CookiesPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
           <p className="mb-4">
             This Cookie Policy explains how Nexabyte Limited (trading as "RapidSite"), a company registered in 
-            England and Wales (Company No. 12345678), uses cookies and similar tracking technologies on our website 
+            England and Wales (Company No. 15817114), uses cookies and similar tracking technologies on our website 
             www.rapidsite.com and our website building platform (collectively, the "Service").
           </p>
           <p className="mb-4">
@@ -285,11 +285,9 @@ const CookiesPage: React.FC = () => {
           </p>
           <div className="bg-gray-100 p-4 rounded-lg">
             <p className="mb-2"><strong>Nexabyte Limited (trading as RapidSite)</strong></p>
-            <p className="mb-2">123 Tech Street, London EC2A 1AB, United Kingdom</p>
-            <p className="mb-2"><strong>Email:</strong> privacy@rapidsite.com</p>
-            <p className="mb-2"><strong>Phone:</strong> +44 20 1234 5678</p>
-            <p className="mb-2"><strong>Data Protection Officer:</strong> dpo@rapidsite.com</p>
-            <p><strong>ICO Registration:</strong> ZA123456</p>
+            <p className="mb-2">Stratford-upon-Avon, United Kingdom</p>
+            <p className="mb-2"><strong>Email:</strong> info@nexabyte.co.uk</p>
+            <p><strong>ICO Registration:</strong> ZB911761</p>
           </div>
         </section>
       </LegalPageTemplate>

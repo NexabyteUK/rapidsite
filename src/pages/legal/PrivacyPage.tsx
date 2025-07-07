@@ -168,9 +168,8 @@ const PrivacyPage: React.FC = () => {
           <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
           <div className="mt-4">
             <p><strong>Nexabyte Limited</strong></p>
-            <p>Email: privacy@nexabyte.co.uk</p>
-            <p>Phone: +44 20 7946 0958</p>
-            <p>Address: London, United Kingdom</p>
+            <p>Email: info@nexabyte.co.uk</p>
+            <p>Address: Stratford-upon-Avon, United Kingdom</p>
           </div>
           <p className="mt-4">
             For data protection concerns, you also have the right to lodge a complaint with the 

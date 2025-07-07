@@ -28,7 +28,7 @@ const BuyoutPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
           <p className="mb-4">
             These Website Buyout Terms ("Buyout Terms") form part of the agreement between Nexabyte Limited 
-            (trading as "RapidSite"), a company registered in England and Wales (Company No. 12345678), and 
+            (trading as "RapidSite"), a company registered in England and Wales (Company No. 15817114), and 
             customers who wish to purchase a permanent, exportable copy of their website created using the 
             RapidSite platform.
           </p>
@@ -215,9 +215,7 @@ const BuyoutPage: React.FC = () => {
           
           <h3 className="text-xl font-semibold text-gray-800 mb-3">7.2 Extended Support Options</h3>
           <div className="bg-gray-100 p-4 rounded-lg mb-4">
-            <p className="mb-2"><strong>Basic Support Extension:</strong> £49/month - Email support continues</p>
-            <p className="mb-2"><strong>Premium Support:</strong> £149/month - Priority email + 2 phone calls</p>
-            <p className="mb-2"><strong>Deployment Service:</strong> £299 one-time - We deploy to your hosting</p>
+            <p className="mb-2">Nexabyte (Rapidsite) does not offer extended support post buyout.</p>
           </div>
           
           <h3 className="text-xl font-semibold text-gray-800 mb-3">7.3 Support Limitations</h3>
@@ -354,10 +352,8 @@ const BuyoutPage: React.FC = () => {
           </p>
           <div className="bg-gray-100 p-4 rounded-lg">
             <p className="mb-2"><strong>Nexabyte Limited (trading as RapidSite)</strong></p>
-            <p className="mb-2">123 Tech Street, London EC2A 1AB, United Kingdom</p>
-            <p className="mb-2"><strong>Buyout Team:</strong> buyout@rapidsite.com</p>
-            <p className="mb-2"><strong>Technical Support:</strong> support@rapidsite.com</p>
-            <p className="mb-2"><strong>Phone:</strong> +44 20 1234 5678</p>
+            <p className="mb-2">Stratforf-upon-Avon, United Kingdom</p>
+            <p className="mb-2"><strong>Queries & Information:</strong> info@nexabyte.co.uk</p>
             <p><strong>Business Hours:</strong> Monday-Friday, 9 AM - 6 PM GMT</p>
           </div>
         </section>

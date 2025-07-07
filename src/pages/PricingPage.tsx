@@ -56,10 +56,9 @@ const addOnServices = [
     price: "£19/month",
     description: "Jump the queue when you need help. Get faster responses when something urgent comes up.",
     features: [
-      "We'll respond within 24 hours",
-      "Your requests go first",
-      "Direct line to our team",
-      "Urgent issues sorted faster"
+      "Sub 24 hour response time",
+      "Access your tickets anytime",
+      "Peace of mind!"
     ]
   }
 ]

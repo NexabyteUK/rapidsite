@@ -16,16 +16,6 @@ const contactMethods = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-      </svg>
-    ),
-    title: "Phone",
-    description: "+44 20 7946 0958",
-    link: "tel:+442079460958"
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
@@ -175,7 +165,7 @@ const ContactPage: React.FC = () => {
                 UK Based, Helping Businesses Everywhere
               </Heading>
               <p className="font-body text-gray-600 mb-6">
-                We're based in London but help businesses all over the world get online. 
+                We're based in Stratford-upon-Avon but help businesses all over the country get online. 
                 Distance doesn't matter when you've got the right team.
               </p>
               <div className="space-y-2">
@@ -183,10 +173,10 @@ const ContactPage: React.FC = () => {
                   <strong>Nexabyte Limited</strong>
                 </p>
                 <p className="font-body text-gray-600">
-                  London, United Kingdom
+                  Stratford-upon-Avon, United Kingdom
                 </p>
                 <p className="font-body text-gray-600">
-                  Company Registration: 123456789
+                  Company Registration: 15817114
                 </p>
               </div>
             </div>
