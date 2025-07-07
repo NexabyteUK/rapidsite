@@ -128,7 +128,7 @@ const AddOnsPage: React.FC = () => {
                     : addon.popular 
                       ? 'border-brand-accent-1 bg-brand-accent-1/5' 
                       : 'border-gray-200 bg-white'
-                } hover:shadow-lg transition-shadow ${addon.popular ? 'mt-4' : ''}`}
+                } hover:shadow-lg transition-shadow ${addon.popular ? 'mt-6' : ''}`}
               >
                 {addon.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
