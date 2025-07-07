@@ -41,17 +41,17 @@ const HeroSection = () => {
           {/* Content Column */}
           <div className="text-center lg:text-left">
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brand-foreground mb-6 leading-tight">
-              A better website in one week — pay monthly.
+              Your professional website, sorted. No stress, no massive bills.
             </h1>
             <p className="font-body text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              RapidSite by Nexabyte builds, hosts and maintains your site for a flat monthly fee. No big up-front costs.
+              We handle everything - design, build, hosting, the lot - while you focus on what you do best: running your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 to="/contact"
                 className="inline-block bg-brand-accent-1 hover:bg-brand-accent-2 text-white font-body font-medium px-8 py-4 rounded-lg transition-colors text-center"
               >
-                Get My Free Mock-Up
+                Get Started Today
               </Link>
               <Link
                 to="/how-it-works"

@@ -10,8 +10,8 @@ const contactMethods = [
       </svg>
     ),
     title: "Email",
-    description: "sales@nexabyte.co.uk",
-    link: "mailto:sales@nexabyte.co.uk"
+    description: "info@nexabyte.co.uk",
+    link: "mailto:info@nexabyte.co.uk"
   },
   {
     icon: (
@@ -69,10 +69,10 @@ const ContactPage: React.FC = () => {
       <Section padding="sm">
         <div className="text-center mb-12">
           <Heading as="h1" size="5xl" className="mb-4">
-            Let's Build Something Amazing Together
+            Ready to get your business online?
           </Heading>
           <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your online presence? Get in touch and let's discuss how we can help your business grow.
+            No sales pitch, just honest advice about what will work for your business. Coffee's on us.
           </p>
         </div>
       </Section>
@@ -83,10 +83,10 @@ const ContactPage: React.FC = () => {
             <div>
               <Card>
                 <Heading as="h2" size="2xl" className="mb-6">
-                  Send Us a Message
+                  Drop Us a Line
                 </Heading>
                 <p className="font-body text-gray-600 mb-8">
-                  Fill out the form below and we'll get back to you within one business day.
+                  Tell us about your business and we'll get back to you by tomorrow with some honest advice.
                 </p>
                 <ContactForm />
               </Card>
@@ -95,7 +95,7 @@ const ContactPage: React.FC = () => {
             <div className="space-y-6">
               <Card>
                 <Heading as="h3" size="xl" className="mb-6">
-                  Other Ways to Reach Us
+                  Prefer to Call or Email?
                 </Heading>
                 <div className="space-y-4">
                   {contactMethods.map((method, index) => (
@@ -127,10 +127,10 @@ const ContactPage: React.FC = () => {
               
               <Card className="bg-gradient-to-br from-brand-accent-1/5 to-brand-accent-2/5">
                 <Heading as="h3" size="xl" className="mb-4">
-                  Prefer a Quick Call?
+                  Let's Have a Chat
                 </Heading>
                 <p className="font-body text-gray-600 mb-6">
-                  Book a free 30-minute consultation to discuss your project requirements.
+                  Book a free 30-minute call. No pressure, just a friendly chat about your business.
                 </p>
                 <Button 
                   as="link" 
@@ -149,7 +149,7 @@ const ContactPage: React.FC = () => {
       <Section>
         <div className="max-w-5xl mx-auto">
           <Heading as="h2" size="3xl" className="text-center mb-12">
-            How Can We Help You?
+            What Can We Help With?
           </Heading>
           
           <Grid cols={{ mobile: 1, tablet: 2 }} gap="md">
@@ -172,11 +172,11 @@ const ContactPage: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <Heading as="h2" size="3xl" className="mb-4">
-                Based in the UK, Serving Globally
+                UK Based, Helping Businesses Everywhere
               </Heading>
               <p className="font-body text-gray-600 mb-6">
-                We're a UK-based company with clients across the globe. 
-                Our team works remotely to provide the best service regardless of your location.
+                We're based in London but help businesses all over the world get online. 
+                Distance doesn't matter when you've got the right team.
               </p>
               <div className="space-y-2">
                 <p className="font-body text-gray-700">
@@ -202,10 +202,10 @@ const ContactPage: React.FC = () => {
       <Section>
         <div className="text-center">
           <Heading as="h2" size="3xl" className="mb-4">
-            Ready to Start Your Project?
+            Ready to Get Started?
           </Heading>
           <p className="font-body text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Don't wait to get your business online. Contact us today and let's build your perfect website.
+            Your business deserves a website that works. Let's make it happen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button as="link" href="#contact-form" size="lg">

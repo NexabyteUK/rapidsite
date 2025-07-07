@@ -82,10 +82,10 @@ const PricingPage: React.FC = () => {
       <Section padding="sm">
         <div className="text-center mb-12">
           <Heading as="h1" size="5xl" className="mb-4">
-            Choose Your Perfect Plan
+            Pick What Works for You
           </Heading>
           <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
-            All plans include hosting, SSL, maintenance, and support. No hidden fees, ever.
+            Everything included. No nasty surprises. Cancel anytime after 12 months.
           </p>
         </div>
       </Section>
@@ -99,10 +99,10 @@ const PricingPage: React.FC = () => {
 
         <div className="text-center mb-16">
           <p className="font-body text-gray-600 mb-4">
-            All prices exclude VAT. Minimum 12-month term applies.
+            Prices exclude VAT. 12-month minimum, then month-to-month.
           </p>
           <Button as="link" href="/contact" size="lg">
-            Get Started Today
+            Let's Get Started
           </Button>
         </div>
 
@@ -165,10 +165,10 @@ const PricingPage: React.FC = () => {
       <Section>
         <div className="bg-gradient-to-r from-brand-accent-1 to-brand-accent-2 rounded-2xl p-8 md:p-12 text-white text-center">
           <Heading as="h2" size="3xl" className="text-white mb-4">
-            Need a Custom Solution?
+            Need Something Different?
           </Heading>
           <p className="font-body text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            We can create a tailored package that perfectly fits your business needs and budget.
+            Got something specific in mind? Let's chat about what you need and find the right solution.
           </p>
           <Button 
             as="link" 
@@ -176,7 +176,7 @@ const PricingPage: React.FC = () => {
             size="lg" 
             variant="secondary"
           >
-            Get Custom Quote
+            Let's Talk
           </Button>
         </div>
       </Section>
@@ -184,7 +184,7 @@ const PricingPage: React.FC = () => {
       <Section background="gray">
         <div className="max-w-3xl mx-auto">
           <Heading as="h2" size="3xl" className="text-center mb-12">
-            Frequently Asked Questions
+            Questions? We've Got Answers
           </Heading>
           
           <div className="space-y-8">
@@ -193,8 +193,8 @@ const PricingPage: React.FC = () => {
                 What happens after the minimum term?
               </h3>
               <p className="font-body text-gray-600">
-                After your 12-month minimum term, your subscription continues on a rolling monthly basis. 
-                You can cancel anytime with 30 days notice.
+                After 12 months, you switch to month-to-month for £49. 
+                Cancel anytime with 30 days notice.
               </p>
             </div>
             
@@ -203,7 +203,7 @@ const PricingPage: React.FC = () => {
                 Can I upgrade or downgrade my plan?
               </h3>
               <p className="font-body text-gray-600">
-                Yes! You can upgrade your plan at any time. Downgrades can be processed at the end of your current billing period.
+                Absolutely. Upgrade anytime. Downgrades happen at your next billing date.
               </p>
             </div>
             
@@ -212,7 +212,7 @@ const PricingPage: React.FC = () => {
                 Do you offer discounts for annual payment?
               </h3>
               <p className="font-body text-gray-600">
-                Yes, we offer a 10% discount when you pay annually in advance. Contact us to learn more about annual pricing options.
+                Yes, 10% off if you pay yearly upfront. Give us a shout and we'll sort out the details.
               </p>
             </div>
             
@@ -221,17 +221,17 @@ const PricingPage: React.FC = () => {
                 What payment methods do you accept?
               </h3>
               <p className="font-body text-gray-600">
-                We accept all major credit cards, debit cards, and bank transfers. We also support Direct Debit for UK businesses.
+                Credit cards, debit cards, bank transfers. UK businesses can use Direct Debit too.
               </p>
             </div>
           </div>
           
           <div className="text-center mt-12">
             <p className="font-body text-gray-600 mb-4">
-              Have more questions? We're here to help.
+              Still got questions? Just ask.
             </p>
             <Button as="link" href="/contact" variant="outline">
-              Contact Support
+              Get in Touch
             </Button>
           </div>
         </div>
