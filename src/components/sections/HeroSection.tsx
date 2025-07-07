@@ -5,19 +5,19 @@ import { cn } from '../../utils/cn'
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   
-  // Mock-up images - in production these would be actual website mockups
+  // High-quality website mockups showcasing modern web design
   const mockupImages = [
     {
-      url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&q=75&fm=webp&fit=crop',
-      alt: 'Modern business website design',
+      url: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&q=80&fm=webp&fit=crop',
+      alt: 'Modern responsive website design on laptop',
     },
     {
-      url: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600&h=400&q=75&fm=webp&fit=crop',
-      alt: 'Professional service website',
+      url: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=400&q=80&fm=webp&fit=crop',
+      alt: 'Professional web development workspace',
     },
     {
-      url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&q=75&fm=webp&fit=crop',
-      alt: 'Professional business website',
+      url: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?w=600&h=400&q=80&fm=webp&fit=crop',
+      alt: 'Clean website interface on multiple devices',
     },
   ]
 
