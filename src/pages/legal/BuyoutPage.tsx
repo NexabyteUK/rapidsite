@@ -16,7 +16,7 @@ const BuyoutPage: React.FC = () => {
       
       <LegalPageTemplate
         title="Website Buyout Terms"
-        lastUpdated="January 3, 2025"
+        lastUpdated="July 3, 2025"
       >
         <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
           <p className="text-lg font-medium text-blue-900">

@@ -16,7 +16,7 @@ const TermsPage: React.FC = () => {
       
       <LegalPageTemplate
         title="Terms of Service"
-        lastUpdated="January 3, 2025"
+        lastUpdated="July 3, 2025"
       >
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Agreement to Terms</h2>

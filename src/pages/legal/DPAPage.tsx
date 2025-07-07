@@ -16,7 +16,7 @@ const DPAPage: React.FC = () => {
       
       <LegalPageTemplate
         title="Data Processing Agreement"
-        lastUpdated="January 3, 2025"
+        lastUpdated="July 3, 2025"
       >
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction and Scope</h2>

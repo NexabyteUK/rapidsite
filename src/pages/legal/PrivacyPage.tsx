@@ -14,7 +14,7 @@ const PrivacyPage: React.FC = () => {
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR" />
       </Helmet>
       
-      <LegalPageTemplate title="Privacy Policy" lastUpdated="January 1, 2024">
+      <LegalPageTemplate title="Privacy Policy" lastUpdated="July 1, 2025">
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
           <p className="mb-4">
