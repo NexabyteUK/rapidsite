@@ -134,7 +134,7 @@ const ContactPage: React.FC = () => {
                 </p>
                 <Button 
                   as="link" 
-                  href="https://calendly.com/consultation" 
+                  href="https://calendly.com/scott-nexabyte" 
                   external 
                   fullWidth
                 >
