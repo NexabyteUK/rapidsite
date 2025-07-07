@@ -26,17 +26,16 @@ const FeatureCard = ({
       )}
     >
       <div className={cn(
-        "mb-4",
-        variant === 'centered' && "flex justify-center"
+        "flex items-center mb-4 gap-3",
+        variant === 'centered' && "justify-center"
       )}>
-        <div className="w-12 h-12 bg-brand-accent-1/10 rounded-lg flex items-center justify-center text-brand-accent-1">
+        <div className="w-10 h-10 bg-brand-accent-1/10 rounded-lg flex items-center justify-center text-brand-accent-1 flex-shrink-0">
           {icon}
         </div>
+        <h3 className="font-heading text-xl font-semibold text-brand-foreground">
+          {title}
+        </h3>
       </div>
-      
-      <h3 className="font-heading text-xl font-semibold text-brand-foreground mb-2">
-        {title}
-      </h3>
       
       <p className="font-body text-gray-600">
         {description}

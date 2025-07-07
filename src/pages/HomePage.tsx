@@ -14,12 +14,12 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>RapidSite - Build Professional Websites in Minutes</title>
+        <title>RapidSite - Your Professional Website, Sorted</title>
         <meta 
           name="description" 
-          content="Create stunning, professional websites without coding. RapidSite makes web development fast, easy, and accessible for everyone." 
+          content="Professional websites that get you customers, built in 7 days. No stress, no massive bills. 100% done for you from £99/month." 
         />
-        <meta name="keywords" content="website builder, no code, rapid development, professional websites" />
+        <meta name="keywords" content="professional website service, website design agency, business website, 7 day delivery, UK web design" />
       </Helmet>
       
       <div className="min-h-screen">

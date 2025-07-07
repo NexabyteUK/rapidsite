@@ -9,10 +9,11 @@ const plans = [
     term: "12 month",
     features: [
       "Your website built in 7 days",
-      "Works on phone, tablet & computer",
+      "Optimised for mobile, tablet & computer",
       "All hosting costs covered",
+      "Custom contact form",
       "Secure connection (HTTPS)",
-      "We'll help within 48 hours",
+      "On-hand support",
       "Kept safe and up-to-date",
       "Fast loading worldwide",
       "100% done for you - no stress"
@@ -25,10 +26,11 @@ const plans = [
     term: "18 month",
     features: [
       "Your website built in 7 days",
-      "Works on phone, tablet & computer",
-      "All hosting costs covered", 
+      "Optimised for mobile, tablet & computer",
+      "All hosting costs covered",
+      "Custom contact form", 
       "Secure connection (HTTPS)",
-      "We'll help within 48 hours",
+      "On-hand support",
       "Kept safe and up-to-date",
       "Fast loading worldwide",
       "100% done for you - no stress"
