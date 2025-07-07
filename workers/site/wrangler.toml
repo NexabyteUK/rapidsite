@@ -7,6 +7,12 @@ bucket = "./dist"
 
 [env.production]
 vars = { ENVIRONMENT = "production" }
+routes = [
+  { pattern = "rapidsite.io/*", custom_domain = true }
+]
 
 [env.staging]
 vars = { ENVIRONMENT = "staging" }
+routes = [
+  { pattern = "*.preview.rapidsite.io/*", custom_domain = true }
+]
