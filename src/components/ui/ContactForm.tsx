@@ -50,10 +50,10 @@ const ContactForm = () => {
       } else {
         throw new Error('Failed to submit form')
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: 'error',
-        message: 'Sorry, there was an error submitting your message. Please try again or email us directly at sales@nexabyte.co.uk',
+        message: 'Sorry, there was an error submitting your message. Please try again or email us directly at info@nexabyte.co.uk',
       })
     } finally {
       setIsSubmitting(false)
