@@ -4,28 +4,40 @@ const plans = [
   {
     name: "Boost",
     price: 109,
+    promotionalPrice: 87.20,
+    promotionalLabel: "20% OFF",
+    promotionalSavings: 21.80,
     term: "12 month",
     features: [
-      "7-day build",
-      "Hosting included",
-      "SSL certificate",
-      "48-hour support response",
-      "Security updates",
-      "Global edge hosting"
+      "Your website built in 7 days",
+      "Optimised for mobile, tablet & computer",
+      "All hosting costs covered",
+      "Custom contact form",
+      "Secure connection (HTTPS)",
+      "On-hand support",
+      "Kept safe and up-to-date",
+      "Fast loading worldwide",
+      "100% done for you - no stress"
     ],
     isPopular: true
   },
   {
     name: "Grow",
     price: 99,
+    promotionalPrice: 79.20,
+    promotionalLabel: "20% OFF",
+    promotionalSavings: 19.80,
     term: "18 month",
     features: [
-      "7-day build",
-      "Hosting included",
-      "SSL certificate",
-      "48-hour support response",
-      "Security updates",
-      "Global edge hosting"
+      "Your website built in 7 days",
+      "Optimised for mobile, tablet & computer",
+      "All hosting costs covered",
+      "Custom contact form", 
+      "Secure connection (HTTPS)",
+      "On-hand support",
+      "Kept safe and up-to-date",
+      "Fast loading worldwide",
+      "100% done for you - no stress"
     ]
   }
 ]
@@ -35,11 +47,15 @@ const PricingSection = () => {
     <Section id="pricing" background="gray">
       <div className="text-center mb-12">
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-brand-foreground mb-4">
-          Simple, Transparent Pricing
+          Summer Sale: 20% Off All Plans
         </h2>
-        <p className="font-body text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+        <p className="font-body text-lg text-gray-600 max-w-3xl mx-auto mb-4">
           Choose the perfect plan for your business. All plans include hosting, SSL, and ongoing support.
         </p>
+        <div className="inline-flex items-center gap-2 bg-orange-100 border border-orange-300 rounded-lg px-4 py-2 text-orange-800">
+          <span className="text-xl">🌞</span>
+          <span className="font-semibold text-sm">Limited time: Save 20% until end of summer</span>
+        </div>
       </div>
       
       <Grid cols={{ mobile: 1, tablet: 2, desktop: 2 }} className="mb-12 max-w-4xl mx-auto">

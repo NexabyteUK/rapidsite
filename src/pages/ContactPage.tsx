@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Section, Heading, ContactForm, Card, Grid, Button } from '../components/ui'
+import PromotionalBanner from '../components/ui/PromotionalBanner'
 
 const contactMethods = [
   {
@@ -27,6 +28,10 @@ const contactMethods = [
 
 const reasons = [
   {
+    title: "🌞 Summer Promotion Inquiry",
+    description: "Want to take advantage of our 20% summer discount? Get started before the offer ends!"
+  },
+  {
     title: "New Website Project",
     description: "Ready to start your website project? Let's discuss your requirements."
   },
@@ -47,6 +52,7 @@ const reasons = [
 const ContactPage: React.FC = () => {
   return (
     <>
+      <PromotionalBanner />
       <Helmet>
         <title>Contact Us - RapidSite</title>
         <meta 
@@ -56,7 +62,7 @@ const ContactPage: React.FC = () => {
         <meta name="keywords" content="contact, support, help, customer service" />
       </Helmet>
       
-      <Section padding="sm">
+      <Section padding="sm" className="pt-28 md:pt-32">
         <div className="text-center mb-12">
           <Heading as="h1" size="5xl" className="mb-4">
             Ready to get your business online?

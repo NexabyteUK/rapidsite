@@ -7,9 +7,21 @@ interface PlanCardProps {
   term: string
   features: string[]
   isPopular?: boolean
+  promotionalPrice?: number
+  promotionalLabel?: string
+  promotionalSavings?: number
 }
 
-const PlanCard = ({ name, price, term, features, isPopular = false }: PlanCardProps) => {
+const PlanCard = ({ 
+  name, 
+  price, 
+  term, 
+  features, 
+  isPopular = false, 
+  promotionalPrice, 
+  promotionalLabel, 
+  promotionalSavings 
+}: PlanCardProps) => {
   return (
     <div
       className={cn(
@@ -30,12 +42,42 @@ const PlanCard = ({ name, price, term, features, isPopular = false }: PlanCardPr
       </h3>
       
       <div className="mb-6">
-        <span className="font-heading text-5xl font-bold text-brand-accent-1">
-          £{price}
-        </span>
-        <span className="font-body text-gray-600 ml-2">
-          /month
-        </span>
+        {promotionalPrice ? (
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="font-heading text-2xl text-gray-400 line-through">
+                £{price}
+              </span>
+              {promotionalLabel && (
+                <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  {promotionalLabel}
+                </span>
+              )}
+            </div>
+            <div className="flex items-baseline gap-2">
+              <span className="font-heading text-5xl font-bold text-brand-accent-1">
+                £{promotionalPrice}
+              </span>
+              <span className="font-body text-gray-600">
+                /month
+              </span>
+            </div>
+            {promotionalSavings && (
+              <div className="text-green-600 font-semibold text-sm mt-1">
+                Save £{promotionalSavings}/month
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="flex items-baseline gap-2">
+            <span className="font-heading text-5xl font-bold text-brand-accent-1">
+              £{price}
+            </span>
+            <span className="font-body text-gray-600">
+              /month
+            </span>
+          </div>
+        )}
       </div>
       
       <div className="space-y-2 mb-6 text-gray-600 font-body">

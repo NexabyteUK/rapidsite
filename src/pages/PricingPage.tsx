@@ -1,11 +1,15 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Section, Grid, PlanCard, Button, Heading } from '../components/ui'
+import PromotionalBanner from '../components/ui/PromotionalBanner'
 
 const plans = [
   {
     name: "Boost",
     price: 109,
+    promotionalPrice: 87.20,
+    promotionalLabel: "20% OFF",
+    promotionalSavings: 21.80,
     term: "12 month",
     features: [
       "Your website built in 7 days",
@@ -23,6 +27,9 @@ const plans = [
   {
     name: "Grow",
     price: 99,
+    promotionalPrice: 79.20,
+    promotionalLabel: "20% OFF",
+    promotionalSavings: 19.80,
     term: "18 month",
     features: [
       "Your website built in 7 days",
@@ -66,16 +73,17 @@ const addOnServices = [
 const PricingPage: React.FC = () => {
   return (
     <>
+      <PromotionalBanner />
       <Helmet>
-        <title>Pricing - RapidSite</title>
+        <title>Summer Sale: 20% Off All Plans - RapidSite Pricing</title>
         <meta 
           name="description" 
-          content="Simple, transparent pricing for RapidSite. Choose the plan that fits your needs and start building today." 
+          content="Limited time: 20% off all RapidSite plans! Simple, transparent pricing for professional websites. Summer promotion ends September 22, 2025." 
         />
         <meta name="keywords" content="pricing, plans, subscription, website builder pricing" />
       </Helmet>
       
-      <Section padding="sm">
+      <Section padding="sm" className="pt-28 md:pt-32">
         <div className="text-center mb-12">
           <Heading as="h1" size="5xl" className="mb-4">
             Pick What Works for You
@@ -102,6 +110,25 @@ const PricingPage: React.FC = () => {
           <Button as="link" href="/contact" size="lg">
             Let's Get Started
           </Button>
+        </div>
+
+        <div className="max-w-2xl mx-auto mb-16">
+          <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+            <h3 className="font-heading text-lg font-bold text-orange-800 mb-3 text-center">
+              🌞 Summer Promotion Terms
+            </h3>
+            <div className="text-sm space-y-2 text-gray-700">
+              <p>
+                <strong>20% discount</strong> applies to monthly price for the full duration of your fixed-term contract.
+              </p>
+              <p>
+                <strong>Valid until:</strong> September 22, 2025 • <strong>Plans:</strong> Boost (12-month) & Grow (18-month)
+              </p>
+              <p className="text-xs text-gray-600 italic text-center mt-3">
+                Discount applied to your invoices. No hidden fees.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">

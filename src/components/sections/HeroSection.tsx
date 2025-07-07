@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { cn } from '../../utils/cn'
+import PromotionalBanner from '../ui/PromotionalBanner'
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -32,7 +33,9 @@ const HeroSection = () => {
   }, [mockupImages.length])
 
   return (
-    <section className="relative pt-20 md:pt-24 pb-mobile md:pb-tablet lg:pb-desktop overflow-hidden">
+    <>
+      <PromotionalBanner />
+      <section className="relative pt-28 md:pt-32 pb-mobile md:pb-tablet lg:pb-desktop overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-background via-white to-brand-background opacity-50" />
       
@@ -43,7 +46,7 @@ const HeroSection = () => {
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brand-foreground mb-6 leading-tight">
               Your professional website, sorted. No stress, no massive bills.
             </h1>
-            <p className="font-body text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="font-body text-lg md:text-xl text-gray-600 mb-6 max-w-xl mx-auto lg:mx-0">
               We handle everything - design, build, hosting, the lot - while you focus on what you do best: running your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -117,6 +120,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 
