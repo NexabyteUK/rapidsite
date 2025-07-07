@@ -58,7 +58,7 @@ const addOnServices = [
     features: [
       "Sub 24 hour response time",
       "Access your tickets anytime",
-      "Peace of mind!"
+      "Complete Peace of mind"
     ]
   }
 ]
