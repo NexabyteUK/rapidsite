@@ -65,24 +65,24 @@ export async function handleContactForm(request: Request, env: ContactEnv): Prom
 
     // Send email notification to admin
     const adminEmailContent = `
-      <div class="email-heading">New Contact Form Submission</div>
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 700; line-height: 1.2; color: #2C2A4E; margin-bottom: 20px;">New Contact Form Submission</div>
       
-      <div class="email-text">
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 16px;">
         You've received a new message through the RapidSite contact form.
       </div>
       
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 24px 0; background-color: #F8F9FA; border-radius: 8px; padding: 20px;">
         <tr>
           <td>
-            <div class="email-text" style="margin-bottom: 12px;">
+            <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 12px;">
               <strong style="color: #2C2A4E;">Contact Name:</strong><br>
               ${data.name}
             </div>
-            <div class="email-text" style="margin-bottom: 12px;">
+            <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 12px;">
               <strong style="color: #2C2A4E;">Email Address:</strong><br>
-              <a href="mailto:${data.email}" class="email-link">${data.email}</a>
+              <a href="mailto:${data.email}" style="color: #D74653; text-decoration: none; font-weight: 500;">${data.email}</a>
             </div>
-            <div class="email-text">
+            <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E;">
               <strong style="color: #2C2A4E;">Message:</strong><br>
               ${data.message.replace(/\n/g, '<br>')}
             </div>
@@ -90,11 +90,11 @@ export async function handleContactForm(request: Request, env: ContactEnv): Prom
         </tr>
       </table>
       
-      <div class="email-text">
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 16px;">
         You can reply directly to this email to respond to ${data.name}.
       </div>
       
-      <div class="email-small-text" style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #E5E5E5; color: #6C757D;">
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #6C757D; line-height: 1.4; margin-top: 24px; padding-top: 20px; border-top: 1px solid #E5E5E5;">
         This email was automatically generated from the RapidSite contact form at rapidsite.nexabyte.co.uk
       </div>
     `
@@ -115,46 +115,36 @@ export async function handleContactForm(request: Request, env: ContactEnv): Prom
 
     // Send auto-response to user
     const userEmailContent = `
-      <div class="email-heading">Thank you for your message!</div>
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 700; line-height: 1.2; color: #2C2A4E; margin-bottom: 20px;">Thank you for your message!</div>
       
-      <div class="email-text">
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 16px;">
         Hi ${data.name},
       </div>
       
-      <div class="email-text">
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 16px;">
         Thank you for contacting Nexabyte! We've received your message and our team will get back to you within one business day.
       </div>
       
-      <div class="email-text">
-        In the meantime, feel free to explore more about our services:
-      </div>
-      
-      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 24px 0;">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 24px 0; background-color: #F8F9FA; border-radius: 8px; padding: 20px;">
         <tr>
-          <td style="padding: 0 10px 0 0;">
-            ${createButton('View Our Pricing', 'https://rapidsite.nexabyte.co.uk/pricing', 'primary')}
-          </td>
-          <td style="padding: 0 0 0 10px;">
-            ${createButton('How It Works', 'https://rapidsite.nexabyte.co.uk/how-it-works', 'secondary')}
+          <td>
+            <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 12px;">
+              <strong style="color: #2C2A4E;">What happens next:</strong><br>
+              Our team will review your message and respond with next steps within one business day.
+            </div>
+            <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 0;">
+              <strong style="color: #2C2A4E;">Need immediate assistance?</strong><br>
+              Call us at <a href="tel:+442079460958" style="color: #D74653; text-decoration: none; font-weight: 500;">+44 20 7946 0958</a>
+            </div>
           </td>
         </tr>
       </table>
       
-      <div class="email-text">
-        <strong>What happens next?</strong>
+      <div style="margin: 24px 0;">
+        ${createButton('View Our Pricing', 'https://rapidsite.nexabyte.co.uk/pricing', 'primary')}
       </div>
       
-      <div class="email-text">
-        • Our team will review your message carefully<br>
-        • We'll respond with next steps or any questions we might have<br>
-        • If you're interested in our services, we'll schedule a brief consultation
-      </div>
-      
-      <div class="email-text">
-        If you have any urgent questions, you can reach us directly at <a href="tel:+442079460958" class="email-link">+44 20 7946 0958</a>.
-      </div>
-      
-      <div class="email-text" style="margin-top: 32px;">
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-top: 32px;">
         Best regards,<br>
         <strong style="color: #2C2A4E;">The Nexabyte Team</strong><br>
         <span style="color: #6C757D;">Nexabyte Limited</span>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40">
+  <!-- Background rectangle with rounded corners -->
+  <rect width="200" height="40" rx="4" fill="#2C2A4E"/>
+  
+  <!-- RapidSite text -->
+  <text x="12" y="26" font-family="Roboto, Arial, sans-serif" font-size="18" font-weight="700" fill="white">Rapid</text>
+  <text x="78" y="26" font-family="Roboto, Arial, sans-serif" font-size="18" font-weight="700" fill="#D74653">Site</text>
+  
+  <!-- Speed lines accent -->
+  <g fill="#D74653">
+    <rect x="150" y="15" width="16" height="2" rx="1"/>
+    <rect x="152" y="18" width="12" height="2" rx="1"/>
+    <rect x="154" y="21" width="8" height="2" rx="1"/>
+  </g>
+  
+  <!-- Small "by Nexabyte" text -->
+  <text x="175" y="32" font-family="Roboto, Arial, sans-serif" font-size="8" font-weight="400" fill="#D74653" opacity="0.8">by Nexabyte</text>
+</svg>
