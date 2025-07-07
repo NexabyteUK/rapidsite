@@ -7,12 +7,8 @@ bucket = "./dist"
 
 [env.production]
 vars = { ENVIRONMENT = "production" }
-routes = [
-  { pattern = "rapidsite.io/*", custom_domain = true }
-]
+# Custom domains are configured via Cloudflare Dashboard
+# Routes would be: rapidsite.io/* (if using zone-based routing)
 
 [env.staging]
 vars = { ENVIRONMENT = "staging" }
-routes = [
-  { pattern = "*.preview.rapidsite.io/*", custom_domain = true }
-]
