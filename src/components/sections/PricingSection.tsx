@@ -9,7 +9,7 @@ const plans = [
       "7-day build",
       "Hosting included",
       "SSL certificate",
-      "Next business day support",
+      "48-hour support response",
       "Security updates",
       "Global edge hosting"
     ],
@@ -23,7 +23,7 @@ const plans = [
       "7-day build",
       "Hosting included",
       "SSL certificate",
-      "Next business day support",
+      "48-hour support response",
       "Security updates",
       "Global edge hosting"
     ]

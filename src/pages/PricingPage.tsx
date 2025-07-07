@@ -11,7 +11,7 @@ const plans = [
       "7-day build",
       "Hosting included",
       "SSL certificate",
-      "Next business day support",
+      "48-hour support response",
       "Security updates",
       "Global edge hosting"
     ],
@@ -25,46 +25,37 @@ const plans = [
       "7-day build",
       "Hosting included",
       "SSL certificate",
-      "Next business day support",
+      "48-hour support response",
       "Security updates",
       "Global edge hosting"
     ]
   }
 ]
 
-const comparisonFeatures = [
-  { category: "Website Features", features: [
-    { name: "Number of Pages", starter: "Up to 5", business: "Up to 10", enterprise: "Unlimited" },
-    { name: "Mobile Responsive", starter: true, business: true, enterprise: true },
-    { name: "Custom Design", starter: true, business: true, enterprise: true },
-    { name: "Content Management", starter: "Basic", business: "Advanced", enterprise: "Full CMS" },
-    { name: "Blog Functionality", starter: false, business: true, enterprise: true },
-    { name: "E-commerce", starter: false, business: "Basic", enterprise: "Advanced" }
-  ]},
-  { category: "Technical Features", features: [
-    { name: "SSL Certificate", starter: true, business: true, enterprise: true },
-    { name: "CDN Hosting", starter: true, business: true, enterprise: true },
-    { name: "Daily Backups", starter: true, business: true, enterprise: true },
-    { name: "Uptime Guarantee", starter: "99.9%", business: "99.9%", enterprise: "99.99%" },
-    { name: "Page Speed Optimization", starter: "Basic", business: "Advanced", enterprise: "Premium" },
-    { name: "Custom Domain", starter: true, business: true, enterprise: true }
-  ]},
-  { category: "Marketing & SEO", features: [
-    { name: "SEO Optimization", starter: "Basic", business: "Advanced", enterprise: "Premium" },
-    { name: "Google Analytics", starter: false, business: true, enterprise: true },
-    { name: "Social Media Integration", starter: "Basic", business: "Full", enterprise: "Full" },
-    { name: "Email Marketing Tools", starter: false, business: "Basic", enterprise: "Advanced" },
-    { name: "A/B Testing", starter: false, business: false, enterprise: true },
-    { name: "Conversion Tracking", starter: false, business: true, enterprise: true }
-  ]},
-  { category: "Support & Service", features: [
-    { name: "Email Support", starter: true, business: true, enterprise: true },
-    { name: "Phone Support", starter: false, business: true, enterprise: true },
-    { name: "Response Time", starter: "48 hours", business: "24 hours", enterprise: "2 hours" },
-    { name: "Monthly Updates", starter: true, business: true, enterprise: true },
-    { name: "Training Sessions", starter: "1 hour", business: "3 hours", enterprise: "Unlimited" },
-    { name: "Account Manager", starter: false, business: false, enterprise: true }
-  ]}
+const addOnServices = [
+  {
+    name: "Change-Pack",
+    price: "£49 per 30-minute block",
+    description: "Need content updates, image changes, or layout tweaks? We handle it for you.",
+    features: [
+      "Content updates",
+      "Image changes", 
+      "Layout modifications",
+      "New page additions",
+      "Any design changes"
+    ]
+  },
+  {
+    name: "Priority Support", 
+    price: "£19/month",
+    description: "Get 24-hour response for urgent issues instead of 48 hours.",
+    features: [
+      "24-hour response",
+      "Priority queue",
+      "Direct support line",
+      "Faster issue resolution"
+    ]
+  }
 ]
 
 const PricingPage: React.FC = () => {
@@ -106,59 +97,41 @@ const PricingPage: React.FC = () => {
           </Button>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Heading as="h2" size="3xl" className="text-center mb-12">
-            Detailed Feature Comparison
+            Need Something Extra?
           </Heading>
+          <p className="font-body text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Both plans include everything you need. Want more? Here are our add-on services.
+          </p>
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            {comparisonFeatures.map((category, categoryIndex) => (
-              <div key={categoryIndex}>
-                <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
-                  <h3 className="font-heading font-semibold text-lg text-brand-foreground">
-                    {category.category}
+          <Grid cols={{ mobile: 1, tablet: 2 }} gap="lg">
+            {addOnServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                <div className="text-center mb-4">
+                  <h3 className="font-heading font-semibold text-xl text-brand-foreground mb-2">
+                    {service.name}
                   </h3>
+                  <div className="font-heading font-bold text-2xl text-brand-accent-1 mb-2">
+                    {service.price}
+                  </div>
+                  <p className="font-body text-gray-600">
+                    {service.description}
+                  </p>
                 </div>
-                <div className="divide-y divide-gray-200">
-                  {category.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="grid grid-cols-4 gap-4 px-6 py-4">
-                      <div className="font-body text-gray-700">
-                        {feature.name}
-                      </div>
-                      <div className="text-center">
-                        {renderFeatureValue(feature.starter)}
-                      </div>
-                      <div className="text-center">
-                        {renderFeatureValue(feature.business)}
-                      </div>
-                      <div className="text-center">
-                        {renderFeatureValue(feature.enterprise)}
-                      </div>
-                    </div>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="font-body text-gray-700">{feature}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
-          </div>
-
-          <div className="grid grid-cols-4 gap-4 mt-8 sticky bottom-0 bg-gray-50 p-4 rounded-lg">
-            <div></div>
-            <div className="text-center">
-              <Button as="link" href="/contact" variant="outline" fullWidth>
-                Choose Starter
-              </Button>
-            </div>
-            <div className="text-center">
-              <Button as="link" href="/contact" fullWidth>
-                Choose Business
-              </Button>
-            </div>
-            <div className="text-center">
-              <Button as="link" href="/contact" variant="secondary" fullWidth>
-                Choose Enterprise
-              </Button>
-            </div>
-          </div>
+          </Grid>
         </div>
       </Section>
 
@@ -240,19 +213,5 @@ const PricingPage: React.FC = () => {
   )
 }
 
-function renderFeatureValue(value: boolean | string) {
-  if (typeof value === 'boolean') {
-    return value ? (
-      <svg className="w-6 h-6 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-      </svg>
-    ) : (
-      <svg className="w-6 h-6 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    )
-  }
-  return <span className="font-body text-gray-700">{value}</span>
-}
 
 export default PricingPage

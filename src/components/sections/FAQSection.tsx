@@ -3,27 +3,27 @@ import { Section, FAQAccordion } from '../ui'
 const faqItems = [
   {
     question: "How long does it take to build a website?",
-    answer: "Most websites are completed within 2-3 weeks from the initial consultation. This includes design, development, content creation, and revisions."
+    answer: "Your website will be ready in 7 days, guaranteed. We work fast because we know your business can't wait around for months."
   },
   {
     question: "What's included in the monthly fee?",
-    answer: "Your monthly fee covers hosting, SSL certificate, regular updates, security monitoring, daily backups, and technical support. No hidden costs!"
+    answer: "Everything you need: hosting, SSL certificate, security updates, uptime monitoring, and next business day support. Your site's always safe and running smooth."
   },
   {
     question: "Can I update the website myself?",
-    answer: "Absolutely! We'll provide you with easy-to-use tools to update content, images, and more. We also offer training and support whenever you need it."
+    answer: "We handle all the technical stuff so you don't have to worry about breaking anything. Need changes? Our Change-Pack service takes care of any updates for £49 per 30-minute block."
   },
   {
     question: "Do you provide the content and images?",
-    answer: "We can help with both! We offer professional copywriting services and have access to premium stock photos. We can also use your existing content."
+    answer: "You know your business best, so we'll use your content and images. Need help getting it ready? We can point you in the right direction."
   },
   {
     question: "What if I want to cancel?",
-    answer: "After your minimum term, you can cancel anytime with 30 days notice. We'll help you export your data and ensure a smooth transition."
+    answer: "After your 12 or 18 month commitment, you can cancel anytime with 30 days notice. We'll make sure you get everything you need for a smooth transition."
   },
   {
-    question: "Do you offer e-commerce websites?",
-    answer: "Yes! Our Business and Enterprise plans support e-commerce functionality. We can set up online stores with payment processing, inventory management, and more."
+    question: "How fast do you respond to support requests?",
+    answer: "Within 48 hours for all support queries. Need faster response? Our Priority Support add-on gets you replies within 24 hours for £19/month."
   }
 ]
 

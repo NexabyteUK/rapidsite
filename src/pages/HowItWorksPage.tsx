@@ -46,8 +46,8 @@ const detailedSteps = [
     description: "We build your website using the latest technologies, ensuring it's fast, secure, and mobile-friendly.",
     details: [
       "Code custom features",
-      "Optimize for all devices",
-      "Implement SEO best practices",
+      "Optimize for all devices", 
+      "Clean, fast-loading code",
       "Set up hosting infrastructure",
       "Configure security features"
     ],
@@ -61,11 +61,11 @@ const detailedSteps = [
     number: 4,
     title: "Content & Review",
     duration: "2-3 days",
-    description: "We populate your website with content, whether you provide it or we create it for you.",
+    description: "We add your content to the website and handle all the technical setup.",
     details: [
-      "Add all text content",
-      "Upload images and media",
-      "Create engaging copy",
+      "Add your text content",
+      "Upload your images and media",
+      "Format everything perfectly",
       "Internal quality testing",
       "Make revisions as needed"
     ],
@@ -84,7 +84,7 @@ const detailedSteps = [
       "Configure domain settings",
       "Set up SSL certificates",
       "Deploy to production",
-      "Submit to search engines",
+      "Final performance checks",
       "Monitor initial performance"
     ],
     icon: (
@@ -97,13 +97,13 @@ const detailedSteps = [
     number: 6,
     title: "Ongoing Support",
     duration: "Continuous",
-    description: "We don't just build and leave. Enjoy continuous updates, maintenance, and support.",
+    description: "We keep your website secure, fast, and running smoothly with ongoing maintenance.",
     details: [
-      "Monthly performance reports",
-      "Regular security updates",
-      "Content updates as needed",
-      "Technical support",
-      "Feature enhancements"
+      "Security updates",
+      "Performance monitoring",
+      "48-hour support response",
+      "Technical maintenance",
+      "Hosting management"
     ],
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,10 +114,10 @@ const detailedSteps = [
 ]
 
 const timeline = [
-  { week: "Week 1", tasks: ["Consultation", "Design mockups", "Get approval"] },
-  { week: "Week 2", tasks: ["Development begins", "Build core features", "Mobile optimization"] },
-  { week: "Week 3", tasks: ["Content integration", "Testing & revisions", "Launch preparation"] },
-  { week: "Ongoing", tasks: ["Monthly updates", "Performance monitoring", "Continuous support"] }
+  { week: "Days 1-2", tasks: ["Consultation", "Design mockups", "Get approval"] },
+  { week: "Days 3-5", tasks: ["Development begins", "Build core features", "Mobile optimization"] },
+  { week: "Days 6-7", tasks: ["Content integration", "Testing & launch", "Go live!"] },
+  { week: "Ongoing", tasks: ["Security updates", "Performance monitoring", "Technical support"] }
 ]
 
 const HowItWorksPage: React.FC = () => {
@@ -225,7 +225,7 @@ const HowItWorksPage: React.FC = () => {
           
           <div className="text-center mt-8">
             <p className="font-body text-gray-600 mb-4">
-              Most websites are live within 2-3 weeks!
+              Your website goes live in exactly 7 days!
             </p>
           </div>
         </div>
@@ -245,12 +245,12 @@ const HowItWorksPage: React.FC = () => {
                   <div className="text-sm opacity-90">Done For You</div>
                 </div>
                 <div>
-                  <div className="text-5xl font-bold mb-2">2-3</div>
-                  <div className="text-sm opacity-90">Weeks to Launch</div>
+                  <div className="text-5xl font-bold mb-2">7</div>
+                  <div className="text-sm opacity-90">Days to Launch</div>
                 </div>
                 <div>
-                  <div className="text-5xl font-bold mb-2">24/7</div>
-                  <div className="text-sm opacity-90">Ongoing Support</div>
+                  <div className="text-5xl font-bold mb-2">UK</div>
+                  <div className="text-sm opacity-90">Based Support</div>
                 </div>
               </Grid>
               
