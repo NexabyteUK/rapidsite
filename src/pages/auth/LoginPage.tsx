@@ -38,7 +38,7 @@ const LoginPage: React.FC = () => {
                 className="h-16 w-auto mx-auto"
               />
             </Link>
-            <p className="text-white/80 mt-2">Customer Dashboard</p>
+            <p className="mt-2">Customer Dashboard</p>
           </div>
 
           <Card className="w-full">
@@ -109,7 +109,7 @@ const LoginPage: React.FC = () => {
           </Card>
 
           <div className="text-center mt-6">
-            <Link to="/" className="text-white/80 hover:text-white text-sm">
+            <Link to="/" className="hover:text-white text-sm">
               ← Back to main site
             </Link>
           </div>
