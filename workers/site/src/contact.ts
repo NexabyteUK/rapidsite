@@ -11,16 +11,22 @@ interface ContactFormData {
   message: string
 }
 
-function validateFormData(data: any): data is ContactFormData {
+function validateFormData(data: unknown): data is ContactFormData {
+  if (typeof data !== 'object' || data === null) {
+    return false
+  }
+  
+  const obj = data as Record<string, unknown>
+  
   return (
-    typeof data.name === 'string' &&
-    data.name.length > 0 &&
-    data.name.length <= 100 &&
-    typeof data.email === 'string' &&
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email) &&
-    typeof data.message === 'string' &&
-    data.message.length > 0 &&
-    data.message.length <= 5000
+    typeof obj.name === 'string' &&
+    obj.name.length > 0 &&
+    obj.name.length <= 100 &&
+    typeof obj.email === 'string' &&
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(obj.email) &&
+    typeof obj.message === 'string' &&
+    obj.message.length > 0 &&
+    obj.message.length <= 5000
   )
 }
 

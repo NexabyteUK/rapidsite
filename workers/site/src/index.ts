@@ -32,7 +32,7 @@ const cacheControl = {
   'font/woff2': 'public, max-age=31536000, immutable',
 }
 
-function handleOptions(request: Request): Response {
+function handleOptions(): Response {
   return new Response(null, {
     status: 204,
     headers: {
@@ -104,7 +104,7 @@ export default {
       
     } catch (e) {
       // Handle 404s for client-side routing
-      if ((e as any).status === 404) {
+      if ((e as { status?: number }).status === 404) {
         // For client-side routes, serve index.html
         const pathname = url.pathname
         if (!pathname.includes('.') && pathname !== '/') {
@@ -131,7 +131,7 @@ export default {
             response.headers.set('Cache-Control', 'public, max-age=0, must-revalidate')
             
             return response
-          } catch (err) {
+          } catch {
             // If index.html is also not found, return 404
             return new Response('Not found', { status: 404 })
           }

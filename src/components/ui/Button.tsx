@@ -1,30 +1,40 @@
 import { forwardRef } from 'react'
-import type { ButtonHTMLAttributes, ReactNode } from 'react'
+import type { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 import { Link } from 'react-router-dom'
 import { cn } from '../../utils/cn'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode
+interface BaseButtonProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
-  as?: 'button' | 'link'
-  href?: string
-  external?: boolean
 }
 
+interface ButtonAsButton extends BaseButtonProps, ButtonHTMLAttributes<HTMLButtonElement> {
+  as?: 'button'
+  href?: never
+  external?: never
+}
+
+interface ButtonAsLink extends BaseButtonProps, Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'className'> {
+  as: 'link'
+  href: string
+  external?: boolean
+  className?: string
+}
+
+type ButtonProps = ButtonAsButton | ButtonAsLink
+
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
-  ({ 
-    children, 
-    className = '', 
-    variant = 'primary',
-    size = 'md',
-    fullWidth = false,
-    as = 'button',
-    href,
-    external = false,
-    ...props
-  }, ref) => {
+  (props, ref) => {
+    const { 
+      children, 
+      className = '', 
+      variant = 'primary',
+      size = 'md',
+      fullWidth = false,
+      as = 'button',
+      ...restProps
+    } = props
     const baseClasses = "inline-flex items-center justify-center font-body font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
     
     const variantClasses = {
@@ -48,7 +58,9 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
       className
     )
     
-    if (as === 'link' && href) {
+    if (as === 'link') {
+      const { href, external, ...linkProps } = restProps as ButtonAsLink
+      
       if (external) {
         return (
           <a
@@ -56,8 +68,8 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
             className={classes}
             target="_blank"
             rel="noopener noreferrer"
-            ref={ref as any}
-            {...(props as any)}
+            ref={ref as React.Ref<HTMLAnchorElement>}
+            {...linkProps}
           >
             {children}
           </a>
@@ -68,8 +80,8 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
         <Link
           to={href}
           className={classes}
-          ref={ref as any}
-          {...(props as any)}
+          ref={ref as React.Ref<HTMLAnchorElement>}
+          {...linkProps}
         >
           {children}
         </Link>
@@ -79,8 +91,8 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
     return (
       <button
         className={classes}
-        ref={ref as any}
-        {...props}
+        ref={ref as React.Ref<HTMLButtonElement>}
+        {...(restProps as ButtonAsButton)}
       >
         {children}
       </button>
