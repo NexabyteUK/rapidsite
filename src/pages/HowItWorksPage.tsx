@@ -1,92 +1,33 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Section, Heading, Button, Card, Grid, Badge } from '../components/ui'
+import { Section, Heading, Button, Card, Grid } from '../components/ui'
+import PromotionalBanner from '../components/ui/PromotionalBanner'
 
-const detailedSteps = [
+const realSteps = [
   {
     number: 1,
-    title: "Initial Consultation",
-    duration: "30 minutes",
-    description: "We start with a free consultation to understand your business, goals, and vision for your website.",
-    details: [
-      "Discuss your business objectives",
-      "Identify target audience",
-      "Review design preferences",
-      "Outline content requirements",
-      "Set project timeline"
-    ],
+    title: "Mock-Up",
+    description: "We create a visual mock-up of your website so you can see exactly what you're getting before we build it.",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v2M7 7h10" />
       </svg>
     )
   },
   {
     number: 2,
-    title: "Design & Planning",
-    duration: "3-5 days",
-    description: "Our design team creates a custom website mockup based on your requirements and brand identity.",
-    details: [
-      "Create wireframes and mockups",
-      "Design custom graphics",
-      "Develop site structure",
-      "Plan user experience",
-      "Get your approval"
-    ],
+    title: "Build",
+    description: "We build your website using React technology and set up fast, secure hosting on Cloudflare's global network.",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
     )
   },
   {
     number: 3,
-    title: "Development",
-    duration: "7-10 days",
-    description: "We build your website using the latest technologies, ensuring it's fast, secure, and mobile-friendly.",
-    details: [
-      "Code custom features",
-      "Optimize for all devices", 
-      "Clean, fast-loading code",
-      "Set up hosting infrastructure",
-      "Configure security features"
-    ],
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    )
-  },
-  {
-    number: 4,
-    title: "Content & Review",
-    duration: "2-3 days",
-    description: "We add your content to the website and handle all the technical setup.",
-    details: [
-      "Add your text content",
-      "Upload your images and media",
-      "Format everything perfectly",
-      "Internal quality testing",
-      "Make revisions as needed"
-    ],
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-      </svg>
-    )
-  },
-  {
-    number: 5,
-    title: "Launch & Go Live",
-    duration: "1 day",
-    description: "Your website goes live! We handle all technical aspects of the launch.",
-    details: [
-      "Configure domain settings",
-      "Set up SSL certificates",
-      "Deploy to production",
-      "Final performance checks",
-      "Monitor initial performance"
-    ],
+    title: "Launch",
+    description: "We connect your domain, make sure everything works perfectly, and your website goes live for customers to find.",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -94,139 +35,135 @@ const detailedSteps = [
     )
   },
   {
-    number: 6,
-    title: "Ongoing Support",
-    duration: "Continuous",
-    description: "We keep your website secure, fast, and running smoothly with ongoing maintenance.",
-    details: [
-      "Security updates",
-      "Performance monitoring",
-      "48-hour support response",
-      "Technical maintenance",
-      "Hosting management"
-    ],
+    number: 4,
+    title: "Ongoing Care",
+    description: "We keep your site running, secure, and up-to-date. Plus next-business-day support when you need us.",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     )
   }
 ]
 
-const timeline = [
-  { week: "Days 1-2", tasks: ["Consultation", "Design mockups", "Get approval"] },
-  { week: "Days 3-5", tasks: ["Development begins", "Build core features", "Mobile optimization"] },
-  { week: "Days 6-7", tasks: ["Content integration", "Testing & launch", "Go live!"] },
-  { week: "Ongoing", tasks: ["Security updates", "Performance monitoring", "Technical support"] }
+const simpleTimeline = [
+  { 
+    day: "Day 1-2", 
+    title: "Mock-Up",
+    tasks: ["Free consultation", "Create visual mock-up", "Get your approval"]
+  },
+  { 
+    day: "Days 3-6", 
+    title: "Build",
+    tasks: ["Build your React website", "Set up Cloudflare hosting", "Test everything works"]
+  },
+  { 
+    day: "Day 7", 
+    title: "Launch",
+    tasks: ["Connect your domain", "Final checks", "Your website goes live"]
+  },
+  { 
+    day: "Ongoing", 
+    title: "Care",
+    tasks: ["Security updates", "Performance monitoring", "Next-business-day support"]
+  }
 ]
 
 const HowItWorksPage: React.FC = () => {
+
   return (
     <>
+      <PromotionalBanner />
       <Helmet>
         <title>How It Works - RapidSite</title>
         <meta 
           name="description" 
-          content="Learn how RapidSite makes website creation simple and fast. From idea to launch in minutes." 
+          content="See how RapidSite gets your business online in 7 days. Mock-up, build, launch, ongoing care - all handled for you." 
         />
         <meta name="keywords" content="how it works, tutorial, guide, website builder process" />
       </Helmet>
       
-      <Section padding="sm">
+      <Section padding="sm" className="pt-28 md:pt-32">
         <div className="text-center mb-12">
           <Heading as="h1" size="5xl" className="mb-4">
-            Your Website Journey with RapidSite
+            How RapidSite Works
           </Heading>
           <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
-            From initial consultation to launch and beyond, we handle everything so you can focus on your business.
+            From first call to launch in 7 days. We handle everything so you can focus on running your business.
           </p>
         </div>
       </Section>
 
       <Section background="gray" padding="lg">
         <div className="max-w-5xl mx-auto">
-          <Heading as="h2" size="3xl" className="text-center mb-12">
-            Our Proven Process
+          <Heading as="h2" size="3xl" className="text-center mb-4">
+            How It Works
           </Heading>
+          <p className="font-body text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Getting your website sorted is easier than ever. Our simple 4-step process gets you online quickly.
+          </p>
           
-          <div className="space-y-8">
-            {detailedSteps.map((step, index) => (
-              <Card key={index} className="relative overflow-hidden">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/3 p-6 bg-gradient-to-br from-brand-accent-1/5 to-brand-accent-2/5">
-                    <div className="flex items-center mb-4">
-                      <div className="w-16 h-16 bg-brand-accent-1 text-white rounded-full flex items-center justify-center mr-4">
-                        <span className="font-heading text-2xl font-bold">{step.number}</span>
-                      </div>
-                      <div>
-                        <h3 className="font-heading text-xl font-semibold text-brand-foreground">
-                          {step.title}
-                        </h3>
-                        <Badge variant="gray" size="sm">{step.duration}</Badge>
-                      </div>
-                    </div>
-                    <div className="text-brand-accent-1">
-                      {step.icon}
-                    </div>
+          <Grid cols={{ mobile: 1, tablet: 2, desktop: 4 }} gap="lg">
+            {realSteps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="relative inline-block mb-6">
+                  <div className="w-20 h-20 bg-brand-accent-1 rounded-full flex items-center justify-center text-white">
+                    {step.icon}
                   </div>
-                  
-                  <div className="md:w-2/3 p-6">
-                    <p className="font-body text-gray-600 mb-4">
-                      {step.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {step.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="flex items-start">
-                          <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span className="font-body text-gray-700">{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-brand-accent-3 rounded-full flex items-center justify-center text-white font-heading font-bold text-sm">
+                    {step.number}
                   </div>
                 </div>
-                
-                {index < detailedSteps.length - 1 && (
-                  <div className="absolute left-8 top-full w-0.5 h-8 bg-gray-300 -translate-y-4 hidden md:block"></div>
-                )}
-              </Card>
+                <h3 className="font-heading text-xl font-bold text-brand-foreground mb-3">
+                  {step.title}
+                </h3>
+                <p className="font-body text-gray-600">
+                  {step.description}
+                </p>
+              </div>
             ))}
-          </div>
+          </Grid>
         </div>
       </Section>
 
       <Section>
         <div className="max-w-5xl mx-auto">
-          <Heading as="h2" size="3xl" className="text-center mb-12">
-            Timeline Overview
+          <Heading as="h2" size="3xl" className="text-center mb-4">
+            Your 7-Day Timeline
           </Heading>
+          <p className="font-body text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            From first call to launch in exactly one week.
+          </p>
           
-          <div className="bg-gradient-to-r from-brand-accent-1/10 to-brand-accent-2/10 rounded-2xl p-8">
-            <Grid cols={{ mobile: 1, tablet: 2, desktop: 4 }} gap="lg">
-              {timeline.map((period, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-white rounded-lg p-6 shadow-md">
-                    <h3 className="font-heading font-semibold text-lg text-brand-accent-1 mb-4">
-                      {period.week}
-                    </h3>
-                    <ul className="space-y-2">
-                      {period.tasks.map((task, taskIndex) => (
-                        <li key={taskIndex} className="font-body text-sm text-gray-600">
-                          {task}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          <Grid cols={{ mobile: 1, tablet: 2, desktop: 4 }} gap="lg" className="mb-12">
+            {simpleTimeline.map((period, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-white rounded-lg p-6 shadow-md border border-gray-100">
+                  <h3 className="font-heading font-bold text-lg text-brand-accent-1 mb-2">
+                    {period.day}
+                  </h3>
+                  <h4 className="font-heading font-semibold text-brand-foreground mb-4">
+                    {period.title}
+                  </h4>
+                  <ul className="space-y-2">
+                    {period.tasks.map((task, taskIndex) => (
+                      <li key={taskIndex} className="font-body text-sm text-gray-600">
+                        {task}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              ))}
-            </Grid>
-          </div>
+              </div>
+            ))}
+          </Grid>
           
-          <div className="text-center mt-8">
-            <p className="font-body text-gray-600 mb-4">
-              Your website goes live in exactly 7 days!
-            </p>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-6 max-w-2xl mx-auto">
+              <h3 className="font-heading text-xl font-bold text-green-800 mb-2">7 Days. Done.</h3>
+              <p className="font-body text-green-700">
+                Your website goes live in exactly 7 working days. No delays, no excuses.
+              </p>
+            </div>
           </div>
         </div>
       </Section>
@@ -236,27 +173,29 @@ const HowItWorksPage: React.FC = () => {
           <Card className="bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
             <div className="text-center">
               <Heading as="h2" size="3xl" className="text-white mb-6">
-                What Makes RapidSite Different?
+                Why Choose RapidSite?
               </Heading>
               
               <Grid cols={{ mobile: 1, tablet: 3 }} gap="lg" className="mb-8">
                 <div>
                   <div className="text-5xl font-bold mb-2">100%</div>
                   <div className="text-sm opacity-90">Done For You</div>
+                  <div className="text-xs opacity-75 mt-1">We handle everything</div>
                 </div>
                 <div>
                   <div className="text-5xl font-bold mb-2">7</div>
-                  <div className="text-sm opacity-90">Days to Launch</div>
+                  <div className="text-sm opacity-90">Working Days</div>
+                  <div className="text-xs opacity-75 mt-1">Not months</div>
                 </div>
                 <div>
-                  <div className="text-5xl font-bold mb-2">UK</div>
-                  <div className="text-sm opacity-90">Based Support</div>
+                  <div className="text-5xl font-bold mb-2">£99</div>
+                  <div className="text-sm opacity-90">Per Month</div>
+                  <div className="text-xs opacity-75 mt-1">Not thousands upfront</div>
                 </div>
               </Grid>
               
               <p className="font-body text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-                Unlike DIY website builders, we handle everything from start to finish. 
-                You get a professional website without the hassle, time, or technical headaches.
+                While other agencies disappear for months and send massive bills, we get you sorted in a week for a fair monthly price.
               </p>
               
               <Button 
@@ -265,7 +204,7 @@ const HowItWorksPage: React.FC = () => {
                 size="lg" 
                 variant="secondary"
               >
-                Start Your Project Today
+                Book Your Free Consultation
               </Button>
             </div>
           </Card>
@@ -273,21 +212,29 @@ const HowItWorksPage: React.FC = () => {
       </Section>
 
       <Section>
-        <div className="text-center">
+        <div className="text-center max-w-3xl mx-auto">
           <Heading as="h2" size="3xl" className="mb-4">
-            Ready to Get Started?
+            Ready to Get Your Business Online?
           </Heading>
-          <p className="font-body text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of businesses who've transformed their online presence with RapidSite.
+          <p className="font-body text-lg text-gray-600 mb-6">
+            Join businesses across the UK who've got their websites sorted with RapidSite. 
           </p>
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8">
+            <p className="font-body text-yellow-800">
+              <strong>🌞 Summer Special:</strong> Save 20% on all plans until September 22nd
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button as="link" href="/contact" size="lg">
-              Book Free Consultation
+              Get My Free Mock-Up
             </Button>
             <Button as="link" href="/pricing" size="lg" variant="outline">
-              View Pricing
+              View Plans & Pricing
             </Button>
           </div>
+          <p className="font-body text-sm text-gray-500 mt-4">
+            No commitment required • Free consultation • UK-based team
+          </p>
         </div>
       </Section>
     </>
