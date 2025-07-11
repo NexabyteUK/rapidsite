@@ -6,7 +6,7 @@ const testimonials = [
     name: "Sarah Johnson",
     company: "Johnson's Bakery",
     rating: 5,
-    quote: "RapidSite transformed our online presence! Our new website looks professional and has significantly increased our customer inquiries. The team was fantastic to work with.",
+    quote: "RapidSite sorted our website worries! Our new website looks great and has significantly increased our customer inquiries. The team was fantastic to work with.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
   },
   {

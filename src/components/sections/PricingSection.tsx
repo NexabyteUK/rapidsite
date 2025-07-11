@@ -50,7 +50,7 @@ const PricingSection = () => {
           Summer Sale: 20% Off All Plans
         </h2>
         <p className="font-body text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-          Choose the perfect plan for your business. All plans include hosting, SSL, and ongoing support.
+          Which plan sorts your website worries? All plans include hosting, SSL, and ongoing support - no nasty surprises.
         </p>
         <div className="inline-flex items-center gap-2 bg-orange-100 border border-orange-300 rounded-lg px-4 py-2 text-orange-800">
           <span className="text-xl">🌞</span>

@@ -62,10 +62,10 @@ const FeaturesSection = () => {
     <Section id="features" background="gray">
       <div className="text-center mb-12">
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-brand-foreground mb-4">
-          Why Small Businesses Choose RapidSite
+          Tired of Website Headaches?
         </h2>
         <p className="font-body text-lg text-gray-600 max-w-3xl mx-auto">
-          We're not just another web agency. We're the small business owner's trusted partner for getting online without the headaches.
+          We get it. Websites are supposed to help your business, not give you sleepless nights. That's why we handle everything so you don't have to worry.
         </p>
       </div>
       

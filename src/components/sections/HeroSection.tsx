@@ -44,10 +44,10 @@ const HeroSection = () => {
           {/* Content Column */}
           <div className="text-center lg:text-left">
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brand-foreground mb-6 leading-tight">
-              Your professional website, sorted. No stress, no massive bills.
+              Your website sorted - no stress, no massive bills.
             </h1>
             <p className="font-body text-lg md:text-xl text-gray-600 mb-6 max-w-xl mx-auto lg:mx-0">
-              We handle everything - design, build, hosting, the lot - while you focus on what you do best: running your business.
+              We handle all the website stuff - design, build, hosting, the lot - while you focus on what you do best: running your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link

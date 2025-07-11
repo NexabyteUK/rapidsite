@@ -15,12 +15,12 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>RapidSite - Your Professional Website, Sorted</title>
+        <title>RapidSite - Your Website Sorted</title>
         <meta 
           name="description" 
           content="Real websites for real businesses, built in 7 days. No stress, no massive bills. 100% done for you from £99/month." 
         />
-        <meta name="keywords" content="professional website service, website design agency, business website, 7 day delivery, UK web design" />
+        <meta name="keywords" content="website service, website design agency, business website, 7 day delivery, UK web design" />
       </Helmet>
       
       <div className="min-h-screen">
