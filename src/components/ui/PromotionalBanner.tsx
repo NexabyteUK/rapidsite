@@ -9,10 +9,10 @@ const PromotionalBanner = () => {
     seconds: 0
   })
 
-  // Summer ends September 22, 2025
-  const endDate = new Date('2025-09-22T23:59:59')
-
   useEffect(() => {
+    // Summer ends September 22, 2025
+    const endDate = new Date('2025-09-22T23:59:59')
+    
     const calculateTimeLeft = () => {
       const now = new Date()
       const difference = endDate.getTime() - now.getTime()

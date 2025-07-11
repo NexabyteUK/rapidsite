@@ -116,7 +116,7 @@ export async function handleContactForm(request: Request, env: ContactEnv): Prom
         showFooter: true,
         showSocialLinks: false,
       }),
-      reply_to: data.email,
+      replyTo: data.email,
     })
 
     // Send auto-response to user
