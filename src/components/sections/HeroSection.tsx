@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, memo } from 'react'
 import { Link } from 'react-router-dom'
 import { cn } from '../../utils/cn'
 import PromotionalBanner from '../ui/PromotionalBanner'
 
-const HeroSection = () => {
+const HeroSection = memo(() => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   
   // High-quality website mockups showcasing modern web design
@@ -22,15 +22,20 @@ const HeroSection = () => {
     },
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === mockupImages.length - 1 ? 0 : prevIndex + 1
-      )
-    }, 5000)
-
-    return () => clearInterval(interval)
+  const nextImage = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === mockupImages.length - 1 ? 0 : prevIndex + 1
+    )
   }, [mockupImages.length])
+
+  const handleIndicatorClick = useCallback((index: number) => {
+    setCurrentImageIndex(index)
+  }, [])
+
+  useEffect(() => {
+    const interval = setInterval(nextImage, 5000)
+    return () => clearInterval(interval)
+  }, [nextImage])
 
   return (
     <>
@@ -105,7 +110,7 @@ const HeroSection = () => {
               {mockupImages.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentImageIndex(index)}
+                  onClick={() => handleIndicatorClick(index)}
                   className={cn(
                     "w-2 h-2 rounded-full transition-all duration-300",
                     currentImageIndex === index
@@ -122,6 +127,8 @@ const HeroSection = () => {
     </section>
     </>
   )
-}
+})
+
+HeroSection.displayName = 'HeroSection'
 
 export default HeroSection

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, memo } from 'react'
 import { cn } from '../../utils/cn'
 
 interface Testimonial {
@@ -14,22 +14,23 @@ interface TestimonialSliderProps {
   testimonials: Testimonial[]
 }
 
-const TestimonialSlider = ({ testimonials }: TestimonialSliderProps) => {
+const TestimonialSlider = memo(({ testimonials }: TestimonialSliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-      )
-    }, 6000)
-
-    return () => clearInterval(interval)
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    )
   }, [testimonials.length])
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentIndex(index)
-  }
+  }, [])
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 6000)
+    return () => clearInterval(interval)
+  }, [nextSlide])
 
   return (
     <div className="relative max-w-4xl mx-auto">
@@ -109,6 +110,8 @@ const TestimonialSlider = ({ testimonials }: TestimonialSliderProps) => {
       </div>
     </div>
   )
-}
+})
+
+TestimonialSlider.displayName = 'TestimonialSlider'
 
 export default TestimonialSlider

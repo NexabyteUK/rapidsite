@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import { Section, Grid, PlanCard, Button, Heading } from '../components/ui'
 import PromotionalBanner from '../components/ui/PromotionalBanner'
 
@@ -74,14 +74,12 @@ const PricingPage: React.FC = () => {
   return (
     <>
       <PromotionalBanner />
-      <Helmet>
-        <title>Summer Sale: 20% Off All Plans - RapidSite Pricing</title>
-        <meta 
-          name="description" 
-          content="Limited time: 20% off all RapidSite plans! Simple, transparent pricing for professional websites. Summer promotion ends September 22, 2025." 
-        />
-        <meta name="keywords" content="pricing, plans, subscription, website builder pricing" />
-      </Helmet>
+      <SEO 
+        title="Summer Sale: 20% Off All Plans - RapidSite Pricing"
+        description="Limited time: 20% off all RapidSite plans! Simple, transparent pricing for professional websites. Summer promotion ends September 22, 2025."
+        keywords="pricing, plans, subscription, website builder pricing"
+        url="https://rapidsite.nexabyte.co.uk/pricing"
+      />
       
       <Section padding="sm" className="pt-28 md:pt-32">
         <div className="text-center mb-12">

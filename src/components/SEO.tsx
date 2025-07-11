@@ -1,5 +1,10 @@
 import { Helmet } from 'react-helmet-async'
 
+interface FAQItem {
+  question: string
+  answer: string
+}
+
 interface SEOProps {
   title?: string
   description?: string
@@ -7,6 +12,7 @@ interface SEOProps {
   image?: string
   url?: string
   type?: string
+  faqItems?: FAQItem[]
 }
 
 const SEO = ({ 
@@ -15,7 +21,8 @@ const SEO = ({
   keywords = "website builder uk, professional website design, business website, rapid website development, uk web design, affordable websites",
   image = "https://rapidsite.nexabyte.co.uk/og-image.svg",
   url = "https://rapidsite.nexabyte.co.uk",
-  type = "website"
+  type = "website",
+  faqItems
 }: SEOProps) => {
   const fullTitle = title.includes('RapidSite') ? title : `${title} - RapidSite`
   
@@ -72,7 +79,7 @@ const SEO = ({
             "addressLocality": "London",
             "addressCountry": "GB"
           },
-          "priceRange": "£99-£109/month",
+          "priceRange": "£79.20-£87.20/month (20% summer discount)",
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -126,34 +133,54 @@ const SEO = ({
             "itemListElement": [
               {
                 "@type": "Offer",
-                "name": "Boost Plan",
-                "price": "109",
+                "name": "Boost Plan (Summer Promotion)",
+                "price": "87.20",
                 "priceCurrency": "GBP",
                 "priceSpecification": {
                   "@type": "UnitPriceSpecification",
-                  "price": "109",
+                  "price": "87.20",
                   "priceCurrency": "GBP",
                   "billingIncrement": 1,
                   "billingDuration": "P1M"
-                }
+                },
+                "validThrough": "2025-09-22"
               },
               {
                 "@type": "Offer",
-                "name": "Grow Plan",
-                "price": "99",
+                "name": "Grow Plan (Summer Promotion)",
+                "price": "79.20",
                 "priceCurrency": "GBP",
                 "priceSpecification": {
                   "@type": "UnitPriceSpecification",
-                  "price": "99",
+                  "price": "79.20",
                   "priceCurrency": "GBP",
                   "billingIncrement": 1,
                   "billingDuration": "P1M"
-                }
+                },
+                "validThrough": "2025-09-22"
               }
             ]
           }
         })}
       </script>
+      
+      {/* FAQ Schema.org */}
+      {faqItems && faqItems.length > 0 && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map(item => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer
+              }
+            }))
+          })}
+        </script>
+      )}
     </Helmet>
   )
 }

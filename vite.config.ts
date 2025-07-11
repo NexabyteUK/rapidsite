@@ -12,11 +12,28 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['react-helmet-async'],
+          'css-vendor': ['clsx'],
+        },
+        chunkFileNames: (chunkInfo) => {
+          return chunkInfo.name === 'vendor' 
+            ? 'assets/vendor.[hash].js'
+            : 'assets/[name].[hash].js'
+        },
+        assetFileNames: (assetInfo) => {
+          if (!assetInfo.name) return 'assets/[name].[hash][extname]'
+          const info = assetInfo.name.split('.')
+          const ext = info[info.length - 1]
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return 'assets/[name].[hash].css'
+          }
+          return `assets/[name].[hash].${ext}`
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
+    cssCodeSplit: true,
+    sourcemap: false,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],

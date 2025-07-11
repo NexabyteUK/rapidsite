@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import { Section, Heading, Button, Card, Grid } from '../components/ui'
 import PromotionalBanner from '../components/ui/PromotionalBanner'
 
@@ -74,14 +74,12 @@ const HowItWorksPage: React.FC = () => {
   return (
     <>
       <PromotionalBanner />
-      <Helmet>
-        <title>How It Works - RapidSite</title>
-        <meta 
-          name="description" 
-          content="See how RapidSite gets your business online in 7 days. Mock-up, build, launch, ongoing care - all handled for you." 
-        />
-        <meta name="keywords" content="how it works, tutorial, guide, website builder process" />
-      </Helmet>
+      <SEO 
+        title="How It Works - RapidSite"
+        description="See how RapidSite gets your business online in 7 days. Mock-up, build, launch, ongoing care - all handled for you."
+        keywords="how it works, tutorial, guide, website builder process"
+        url="https://rapidsite.nexabyte.co.uk/how-it-works"
+      />
       
       <Section padding="sm" className="pt-28 md:pt-32">
         <div className="text-center mb-12">

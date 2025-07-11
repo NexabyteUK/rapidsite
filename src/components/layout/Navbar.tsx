@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { cn } from '../../utils/cn'
+import { OptimizedImage } from '../ui'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -41,10 +42,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
+            <OptimizedImage 
               src={isScrolled ? "/rapidsite-logo-white.png" : "/rapidsite-logo.png"}
               alt="RapidSite" 
               className="h-10 w-auto transition-all duration-300"
+              loading="eager"
+              width={120}
+              height={40}
             />
           </Link>
 

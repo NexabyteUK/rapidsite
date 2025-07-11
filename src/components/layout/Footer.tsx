@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { OptimizedImage } from '../ui'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -23,10 +24,13 @@ const Footer = () => {
         {/* Logo and tagline */}
         <div className="mb-12">
           <Link to="/" className="inline-block mb-4">
-            <img 
+            <OptimizedImage 
               src="/rapidsite-logo-white.png" 
               alt="RapidSite" 
               className="h-10 w-auto"
+              loading="lazy"
+              width={120}
+              height={40}
             />
           </Link>
           <p className="text-gray-300 max-w-md">

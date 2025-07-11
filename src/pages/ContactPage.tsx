@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import { Section, Heading, ContactForm, Card, Grid, Button } from '../components/ui'
 import PromotionalBanner from '../components/ui/PromotionalBanner'
 
@@ -53,14 +53,12 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <PromotionalBanner />
-      <Helmet>
-        <title>Contact Us - RapidSite</title>
-        <meta 
-          name="description" 
-          content="Get in touch with the RapidSite team. We're here to help you build your perfect website." 
-        />
-        <meta name="keywords" content="contact, support, help, customer service" />
-      </Helmet>
+      <SEO 
+        title="Contact Us - RapidSite"
+        description="Get in touch with the RapidSite team. We're here to help you build your perfect website."
+        keywords="contact, support, help, customer service"
+        url="https://rapidsite.nexabyte.co.uk/contact"
+      />
       
       <Section padding="sm" className="pt-28 md:pt-32">
         <div className="text-center mb-12">
