@@ -140,7 +140,7 @@ export async function handleContactForm(request: Request, env: ContactEnv): Prom
             </div>
             <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #2C2A4E; margin-bottom: 0;">
               <strong style="color: #2C2A4E;">Need immediate assistance?</strong><br>
-              Call us at <a href="tel:+442079460958" style="color: #D74653; text-decoration: none; font-weight: 500;">+44 20 7946 0958</a>
+              Message us at <a href="tel:+447735183330" style="color: #D74653; text-decoration: none; font-weight: 500;">+44 7735 183 330</a>
             </div>
           </td>
         </tr>

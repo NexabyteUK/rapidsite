@@ -20,7 +20,7 @@ We're not another web agency. We're the small business owner's trusted website p
 - **Why:** Small business owners want clarity, not complexity
 
 ### 2.2 Confidence-Building
-- **Do:** "Your site will be ready in 7 days, guaranteed"
+- **Do:** "Your site will be ready in 7 days"
 - **Don't:** "We aim to deliver projects in a timely manner"
 - **Why:** Address uncertainty with clear, confident promises
 
@@ -60,7 +60,7 @@ We're not another web agency. We're the small business owner's trusted website p
 ## 4. Key Messages
 
 ### 4.1 Primary Value Proposition
-"Professional websites that actually get you customers, without the agency drama or massive bills."
+"Real websites for real businesses, without the agency drama or massive bills."
 
 ### 4.2 Core Benefits (in order of importance)
 1. **Speed** - 7 days, not months

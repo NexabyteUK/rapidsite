@@ -3,7 +3,7 @@ import { Section, FAQAccordion } from '../ui'
 const faqItems = [
   {
     question: "How long does it take to build a website?",
-    answer: "Your website will be ready in 7 days, guaranteed. We work fast because we know your business can't wait around for months."
+    answer: "Your website will be ready in 7 days. We work fast because we know your business can't wait around for months."
   },
   {
     question: "What's included in the monthly fee?",
@@ -33,7 +33,7 @@ const faqItems = [
 
 const FAQSection = () => {
   return (
-    <Section id="faq" background="gray">
+    <Section id="faq">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-brand-foreground mb-4">

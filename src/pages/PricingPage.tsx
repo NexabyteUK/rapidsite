@@ -107,9 +107,6 @@ const PricingPage: React.FC = () => {
           <p className="font-body text-gray-600 mb-4">
             12-month minimum, then month-to-month.
           </p>
-          <Button as="link" href="/contact" size="lg">
-            Let's Get Started
-          </Button>
         </div>
 
         <div className="max-w-2xl mx-auto mb-16">
@@ -200,7 +197,7 @@ const PricingPage: React.FC = () => {
                 What happens after the minimum term?
               </h3>
               <p className="font-body text-gray-600">
-                After 12 months, you switch to month-to-month for £49. 
+                After your minimum term (12 or 18 months), you continue at the same monthly rate on a rolling basis. 
                 Cancel anytime with 30 days notice.
               </p>
             </div>

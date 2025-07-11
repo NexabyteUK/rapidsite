@@ -44,7 +44,7 @@ const features = [
       </svg>
     ),
     title: "Built to Last",
-    description: "Clean, fast code that loads quickly and works reliably. No cutting corners, just solid websites that do their job."
+    description: "Your website loads fast and works properly. We don't cut corners - we build things right the first time."
   },
   {
     icon: (

@@ -44,7 +44,7 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <Section id="pricing" background="gray">
+    <Section id="pricing">
       <div className="text-center mb-12">
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-brand-foreground mb-4">
           Summer Sale: 20% Off All Plans

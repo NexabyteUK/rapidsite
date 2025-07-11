@@ -11,18 +11,8 @@ export interface EmailTemplateOptions {
 export function createEmailTemplate(options: EmailTemplateOptions): string {
   const { subject, preheader, content, showFooter = true, showSocialLinks = true } = options
   
-  const logoSvg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40" style="display: block; margin: 0 auto;">
-      <rect width="200" height="40" rx="4" fill="#2C2A4E"/>
-      <text x="12" y="26" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="white">Rapid</text>
-      <text x="78" y="26" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#D74653">Site</text>
-      <g fill="#D74653">
-        <rect x="150" y="15" width="16" height="2" rx="1"/>
-        <rect x="152" y="18" width="12" height="2" rx="1"/>
-        <rect x="154" y="21" width="8" height="2" rx="1"/>
-      </g>
-      <text x="175" y="32" font-family="Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#D74653" opacity="0.8">by Nexabyte</text>
-    </svg>
+  const logoImage = `
+    <img src="https://assets.rapidsite.io/rapidsite-logo.png" alt="Rapidsite Logo" width="200" height="40" style="display: block; margin: 0 auto; max-width: 200px; height: auto;" />
   `
 
   return `
@@ -64,7 +54,7 @@ export function createEmailTemplate(options: EmailTemplateOptions): string {
           <!-- Header -->
           <tr>
             <td style="background-color: #2C2A4E; padding: 20px 40px; text-align: center;">
-              ${logoSvg}
+              ${logoImage}
             </td>
           </tr>
           
@@ -87,7 +77,6 @@ export function createEmailTemplate(options: EmailTemplateOptions): string {
                     <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #6C757D; line-height: 1.4; margin-bottom: 16px;">
                       <strong>Nexabyte Limited</strong><br>
                       London, United Kingdom<br>
-                      +44 20 7946 0958
                     </div>
                     
                     ${showSocialLinks ? `
@@ -102,7 +91,7 @@ export function createEmailTemplate(options: EmailTemplateOptions): string {
                     <!-- Legal -->
                     <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #999999; line-height: 1.4; margin-top: 20px;">
                       © ${new Date().getFullYear()} Nexabyte Limited. All rights reserved.<br>
-                      Professional website development services by RapidSite.
+                      Real websites for real businesses - RapidSite.
                     </div>
                     
                   </td>

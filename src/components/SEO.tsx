@@ -11,7 +11,7 @@ interface SEOProps {
 
 const SEO = ({ 
   title = "RapidSite - Professional Website Builder for UK Businesses",
-  description = "Get your business online with RapidSite. Professional websites from £99/month. No coding required. UK-based support. Launch in 7 days.",
+  description = "Get your business online with RapidSite. Real websites for real businesses from £99/month. No coding required. UK-based support. Launch in 7 days.",
   keywords = "website builder uk, professional website design, business website, rapid website development, uk web design, affordable websites",
   image = "https://rapidsite.nexabyte.co.uk/og-image.svg",
   url = "https://rapidsite.nexabyte.co.uk",
@@ -81,8 +81,8 @@ const SEO = ({
           },
           "sameAs": [
             "https://www.nexabyte.co.uk",
-            "https://twitter.com/nexabyte",
-            "https://www.linkedin.com/company/nexabyte"
+            "https://www.linkedin.com/company/nexabyteuk",
+            "https://www.facebook.com/profile.php?id=61561513090149"
           ]
         })}
       </script>

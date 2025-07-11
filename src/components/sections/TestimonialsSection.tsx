@@ -29,7 +29,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <Section id="testimonials">
+    <Section id="testimonials" background="gray">
       <div className="text-center mb-12">
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-brand-foreground mb-4">
           What Our Clients Say

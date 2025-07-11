@@ -71,7 +71,7 @@ const PromotionalBanner = () => {
           <div className="hidden sm:block text-white opacity-80">•</div>
           
           <Link 
-            to="/pricing" 
+            to="/pricing#pricing" 
             className="bg-white text-red-600 hover:bg-yellow-100 font-semibold px-3 py-1 rounded transition-colors text-sm"
           >
             Get Started

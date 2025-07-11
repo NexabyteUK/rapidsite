@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Layout from './components/layout/Layout'
+import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
 import PricingPage from './pages/PricingPage'
 import HowItWorksPage from './pages/HowItWorksPage'
@@ -26,6 +27,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <Routes>
           {/* Main website routes */}
           <Route path="/" element={<Layout />}>
