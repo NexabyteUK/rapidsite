@@ -6,9 +6,12 @@ compatibility_date = "2024-01-01"
 bucket = "./dist"
 
 [env.production]
+name = "rapidsite-production"
 vars = { ENVIRONMENT = "production" }
-# Custom domains are configured via Cloudflare Dashboard
-# Routes would be: rapidsite.io/* (if using zone-based routing)
+routes = [
+  { pattern = "rapidsite.io/*", zone_name = "rapidsite.io" },
+  { pattern = "www.rapidsite.io/*", zone_name = "rapidsite.io" }
+]
 
 [env.staging]
 vars = { ENVIRONMENT = "staging" }
